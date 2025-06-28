@@ -1,0 +1,95 @@
+.Frameworks{
+    margin: auto;
+    padding: 0 80px;
+    position: relative;
+
+
+}
+
+.Frameworks .bi{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bi.bi-arrow-left-circle{
+    right: auto;
+    left: 0;
+}
+
+.slider{
+    overflow: hidden;
+
+}
+
+.slider ul{
+    display: flex;
+    width: 200%;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+}
+
+.slider ul li{
+    list-style: None;
+    width: 50%;
+    padding: 20px;
+
+}
+
+.slide{
+    box-shadow: 0 0 8px 1px wheat;
+    padding: 40px;
+    border-radius: 10px;
+    color: wheat;
+    line-height: 1.3; 
+    height: 100%;
+}
+
+.skill-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    overflow-x: hidden;
+}
+
+.skill-info h3{
+    display: flex;
+    color: white;
+}
+
+.slide img{
+    width: 150px;
+    border-radius: 10%;
+    margin-right: 10px;
+    height: 70px;
+}
+
+.slide .react_logo{
+    height: 40px;
+    width: auto;
+
+}
+
+.slide .mongodb_logo{
+    height: 80px;
+    width: auto;
+
+}
+
+.slide .nodejs_logo{
+    height: 50px;
+    width: auto;
+
+}
+
+.slide .virtualbox_logo{
+    height: 20px;
+    width: auto;
+
+}

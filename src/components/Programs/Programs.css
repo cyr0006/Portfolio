@@ -1,0 +1,119 @@
+.programs{
+    margin: 80px auto;
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.programs img{
+
+    border-radius: 10px;
+    display: block;
+    justify-self: center;
+    align-self: center;
+}
+
+.program{
+    flex-basis: 31%;   
+    position: relative;
+    height: inherit;
+    width: inherit;
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+
+
+}
+
+
+.caption{
+    height: inherit;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(245, 222, 179, 0.959);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    padding-top: 0;
+    transition: 0.4s;
+    border: 10px;
+    object-fit: cover;
+    box-shadow: inset 50px red;
+    
+}
+
+.caption svg{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+
+.program:hover .caption{
+    padding-top: 0;
+    opacity: 1;
+    box-shadow: 0 0 20px wheat;
+
+
+    
+}
+
+.python_logo {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+
+img.java_logo{
+  width: 200px;
+  height: auto;
+  display: block;
+}
+img.js_logo{
+  width: 150px;
+  height: auto;
+  display: block;
+}
+img.html_logo{
+  width: 90px;
+  height: auto;
+  display: block;
+}
+
+img.css_logo{
+  width: 70px;
+  height: auto;
+  display: block;
+}
+img.react_logo{
+  width: 150px;
+  height: auto;
+  display: block;
+}
+img.sql_logo{
+  width: 100px;
+  height: auto;
+  display: block;
+}
+img.assembly_logo{
+  width: 80px;
+  height: auto;
+  display: block;
+}
+img.cpp_logo{
+  width: 70px;
+  height: auto;
+  display: block;
+}
