@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import logo from "../../assets/Aryan Cyrus.png";
+import logo from "../../assets/Aryan Logo.png";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
