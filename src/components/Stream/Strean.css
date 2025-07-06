@@ -1,0 +1,38 @@
+
+.about-page {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  height: fit-content;
+  margin-bottom: 20px;
+  margin-left: 5vw;
+}
+
+.stream-line {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, wheat, rgb(255, 193, 77));
+  border-radius: 3px;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px wheat; }
+  50% { box-shadow: 0 0 15px rgb(255, 193, 77); }
+  100% { box-shadow: 0 0 5px rgb(228, 187, 110); }
+}
+
+.content-blocks {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  color: white;
+}
+
+.content-blocks p{
+    width: 50%;
+}

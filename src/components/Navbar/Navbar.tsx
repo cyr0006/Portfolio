@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import logo from "../../assets/Aryan Logo.png";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -16,7 +17,9 @@ const Navbar = () => {
       <img src={logo} alt="" className="logo" />
       <ul>
         <li>Home</li>
-        <li>About</li>
+        <li>
+          <Link to="/about">About </Link>
+        </li>
         <li>
           <button className="btn">Contact</button>
         </li>
