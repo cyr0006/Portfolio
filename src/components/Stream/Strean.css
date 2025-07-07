@@ -8,11 +8,22 @@
   margin-left: 5vw;
 }
 
-.stream-line {
+.stream-line-l{
   position: absolute;
   left: 50px;
   top: 0;
-  width: 6px;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, wheat, rgb(255, 193, 77));
+  border-radius: 3px;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.stream-line-r {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 8px;
   height: 100%;
   background: linear-gradient(to bottom, wheat, rgb(255, 193, 77));
   border-radius: 3px;
@@ -34,5 +45,31 @@
 }
 
 .content-blocks p{
-    width: 50%;
+    width: 99%;
+}
+
+.content-blocks h2{
+    color: wheat;
+    font-weight: 600;
+    font-size: 35px;
+    margin: 10px 0;
+    max-width: 400px;
+}
+
+.content-blocks h3{
+      color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.content-blocks .monash_logo{
+  height: 300px;
+  width: 300px;
+
+}
+.content-blocks .cardinia_logo{
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+
 }

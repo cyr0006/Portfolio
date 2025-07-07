@@ -1,65 +1,73 @@
 import "./Strean.css";
 import { motion } from "framer-motion";
+import monash_logo from "../../assets/monash_logo.png";
+import cardinia_logo from "../../assets/cardinia_logo.png";
 
 const Stream = () => {
   return (
-    <section className="about-page">
-      <div className="stream-line" />
-      <div className="content-blocks">
-        <motion.div
-          className="block"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h3>My Story</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
-            porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-            purus lectus malesuada libero, sit amet commodo magna eros quis
-            urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac
-          </p>
-        </motion.div>
+    <>
+      <section className="about-page">
+        <div className="stream-line-l" />
+        <div className="content-blocks">
+          <h2>Qualifications</h2>
+          <ul>
+            <li>
+              <motion.div
+                className="block"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h3>Bachelor of Software Engineering (Honors)</h3>
 
-        <motion.div
-          className="block"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <h3>Qualifications</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
-            porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-            purus lectus malesuada libero, sit amet commodo magna eros quis
-            urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac
-          </p>
-        </motion.div>
+                <p>
+                  Current undertaking a bechelor of Software Engineering at
+                  monash university, Clayton Campus. university, Clayton
+                  Campus.Lorem ipsum dolor sit amet, consectetuer adipiscing
+                  elit. Maecenas porttitor congue massa. Fusce posuere, magna
+                  sed pulvinar ultricies, purus lectus malesuada libero, sit
+                  amet commodo magna eros quis urna. Nunc viverra imperdiet
+                  enim. Fusce est.
+                </p>
+              </motion.div>
+            </li>
+          </ul>
+        </div>
 
-        <motion.div
-          className="block"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <h3>Experience</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
-            porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-            purus lectus malesuada libero, sit amet commodo magna eros quis
-            urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac
-          </p>
-        </motion.div>
+        <div className="content-blocks">
+          <img src={monash_logo} className="monash_logo" />
+        </div>
+      </section>
+      <section className="about-page">
+        <div className="stream-line-r" />
+        <div className="content-blocks">
+          <img src={cardinia_logo} className="cardinia_logo" />
+        </div>
+        <div className="content-blocks">
+          <h2>Experience</h2>
 
-        {/* Add more animated blocks as needed */}
-      </div>
-    </section>
+          <ul>
+            <li>
+              <motion.div
+                className="block"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h3>
+                  Customer Support Officer - Cardinia Shire Council (2023 -
+                  present)
+                </h3>
+                <p>
+                  I am currently a member of Cardinia Shire Council Custmer
+                  Service team.
+                </p>
+              </motion.div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </>
   );
 };
 
