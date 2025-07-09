@@ -43,3 +43,15 @@ a{
     width: 20px;
     margin-left: 10px;
 }
+
+/*---- Media Query ----*/
+@media (max-width: 600px) {
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .btn{
+        padding: 14px 22px;
+    }
+    
+}
