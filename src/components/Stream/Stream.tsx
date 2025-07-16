@@ -22,12 +22,9 @@ const Stream = () => {
 
                 <p>
                   Current undertaking a bechelor of Software Engineering at
-                  monash university, Clayton Campus. university, Clayton
-                  Campus.Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit. Maecenas porttitor congue massa. Fusce posuere, magna
-                  sed pulvinar ultricies, purus lectus malesuada libero, sit
-                  amet commodo magna eros quis urna. Nunc viverra imperdiet
-                  enim. Fusce est.
+                  monash university, Clayton Campus. university, Clayton Campus.
+                  Upon th completion of my course, I aim to profnessioally mog
+                  even the most renouned engineers in the industry.
                 </p>
               </motion.div>
             </li>

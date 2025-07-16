@@ -13,10 +13,10 @@ const App = () => {
       <Navbar />
       <Hero />
       <div className="container">
-        <Title subtitle="Languages" title="Title" />
+        <Title subtitle="Languages" title="My Arsenal" />
         <Programs />
         <About />
-        <Title subtitle="My Photos" title="Gallery" />
+        <Title subtitle="From Databases to VM-ware" title="Tools that I use" />
         <Frameworks />
         <Title subtitle="Contact Me" title="Get in touch" />
         <Contact />

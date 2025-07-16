@@ -66,12 +66,8 @@ const Frameworks = () => {
                 </div>
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Maecenas porttitor congue massa. Fusce posuere, magna sed
-                pulvinar ultricies, purus lectus malesuada libero, sit amet
-                commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce
-                est. Vivamus a tellus. Pellentesque habitant morbi tristique
-                senectus et netus et malesuada fames ac
+                Create up-to-date, responsive and aesthetic websites with react.
+                No more webpages from 2005. Welcome to 2025.
               </p>
             </div>
           </li>
@@ -85,12 +81,9 @@ const Frameworks = () => {
                 </div>
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Maecenas porttitor congue massa. Fusce posuere, magna sed
-                pulvinar ultricies, purus lectus malesuada libero, sit amet
-                commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce
-                est. Vivamus a tellus. Pellentesque habitant morbi tristique
-                senectus et netus et malesuada fames ac
+                MongoDB is a flexible NoSQL database that stores data in
+                documents, supports scalability, schema-less design, and
+                powerful queries.
               </p>
             </div>
           </li>
@@ -105,12 +98,8 @@ const Frameworks = () => {
               </div>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Maecenas porttitor congue massa. Fusce posuere, magna sed
-                pulvinar ultricies, purus lectus malesuada libero, sit amet
-                commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce
-                est. Vivamus a tellus. Pellentesque habitant morbi tristique
-                senectus et netus et malesuada fames ac
+                Whether it's web servers, APIs, or databases. Node.js not only
+                delivers, but does so under pressure. A little like Postman Pat.
               </p>
             </div>
           </li>
@@ -125,12 +114,10 @@ const Frameworks = () => {
               </div>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Maecenas porttitor congue massa. Fusce posuere, magna sed
-                pulvinar ultricies, purus lectus malesuada libero, sit amet
-                commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce
-                est. Vivamus a tellus. Pellentesque habitant morbi tristique
-                senectus et netus et malesuada fames ac
+                Virtual box - saves developers from the terrible ordeal of
+                needing a Mac OS device for testing. VM-ware is a critical tool
+                I use to test functionality across a diverse array of
+                environments.
               </p>
             </div>
           </li>

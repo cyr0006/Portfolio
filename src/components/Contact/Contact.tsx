@@ -51,10 +51,9 @@ export const Contact = () => {
             />
           </svg>
         </h3>
+        <p>Have any questions, requests or enquiries?</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
-          porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-          purus lectus malesuada libero, sit amet
+          Please don't hesitate to contact me via the form or details below.
         </p>
         <ul>
           <li>
