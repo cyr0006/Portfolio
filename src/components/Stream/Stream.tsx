@@ -1,4 +1,4 @@
-import "./Strean.css";
+import "./Stream.css";
 import { motion } from "framer-motion";
 import monash_logo from "../../assets/monash_logo.png";
 import cardinia_logo from "../../assets/cardinia_logo.png";
@@ -6,9 +6,9 @@ import cardinia_logo from "../../assets/cardinia_logo.png";
 const Stream = () => {
   return (
     <>
-      <section className="about-page">
+      <section className="about-row">
         <div className="stream-line-l" />
-        <div className="content-blocks">
+        <div className="content-blocks-l">
           <h2>Qualifications</h2>
           <ul>
             <li>
@@ -30,17 +30,13 @@ const Stream = () => {
             </li>
           </ul>
         </div>
-
-        <div className="content-blocks">
-          <img src={monash_logo} className="monash_logo" />
-        </div>
+        <img src={monash_logo} className="monash_logo" />
       </section>
-      <section className="about-page">
+
+      <section className="about-row">
         <div className="stream-line-r" />
-        <div className="content-blocks">
-          <img src={cardinia_logo} className="cardinia_logo" />
-        </div>
-        <div className="content-blocks">
+        <img src={cardinia_logo} className="cardinia_logo" />
+        <div className="content-blocks-r">
           <h2>Experience</h2>
 
           <ul>

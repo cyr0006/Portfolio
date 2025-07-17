@@ -1,19 +1,20 @@
 
-.about-page {
+.about-row {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
   height: fit-content;
+  width: fit-content;
   margin-bottom: 20px;
-  margin-left: 5vw;
+  margin-left: 4vw;
 }
 
 .stream-line-l{
   position: absolute;
-  left: 50px;
   top: 0;
   width: 8px;
   height: 100%;
+  flex-basis: 40%;
   background: linear-gradient(to bottom, wheat, rgb(255, 193, 77));
   border-radius: 3px;
   animation: pulse 3s infinite ease-in-out;
@@ -36,19 +37,42 @@
   100% { box-shadow: 0 0 5px rgb(228, 187, 110); }
 }
 
-.content-blocks {
-  margin-left: 100px;
+.content-blocks-l {
+  margin-left: 50px;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1rem;
   color: white;
+  flex-basis: 50%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  overflow-wrap: break-word;
+
 }
 
-.content-blocks p{
+.content-blocks-r {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  flex-basis: 50%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  overflow-wrap: break-word;
+
+  justify-content: center;
+  
+
+}
+
+.about-row p{
     width: 99%;
 }
 
-.content-blocks h2{
+.about-row  h2{
     color: wheat;
     font-weight: 600;
     font-size: 35px;
@@ -56,20 +80,36 @@
     max-width: 400px;
 }
 
-.content-blocks h3{
+.about-row  h3{
       color: white;
     font-weight: 600;
     font-size: 20px;
+    
 }
 
-.content-blocks .monash_logo{
-  height: 300px;
-  width: 300px;
+.about-row .monash_logo{
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display:flex;
+  align-self: center;
+  flex-basis: 10%;
 
 }
-.content-blocks .cardinia_logo{
+.about-row .cardinia_logo{
   height: 300px;
   width: 300px;
   border-radius: 20px;
 
+}
+
+
+/*---- Media Query ----*/
+@media (max-width: 1000px) {
+    .logo{
+        width: 20px;
+    }
+    nav ul li{
+        margin: 10px 15px;
+    }
 }
