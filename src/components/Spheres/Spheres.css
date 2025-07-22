@@ -1,0 +1,9 @@
+
+
+Canvas{
+    cursor:grab;
+}
+
+Canvas:active{
+    cursor:grabbing;
+}
