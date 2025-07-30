@@ -11,49 +11,50 @@ import assembly_logo from "../../assets/assembly-logo.png";
 import cpp_logo from "../../assets/cpp-logo.png";
 
 import Spheres from "../Spheres/Spheres";
+import { js } from "three/tsl";
 
 const Programs = () => {
   return (
     <>
       <div className="programs">
         <div className="program">
-          <Spheres />
+          <Spheres myDecal={python_logo} />
         </div>
 
         <div className="program">
-          <Spheres />
+          <Spheres myDecal={java_logo} />
         </div>
 
         <div className="program">
-          <Spheres />
-        </div>
-      </div>
-
-      <div className="programs">
-        <div className="program">
-          <Spheres />
-        </div>
-
-        <div className="program">
-          <Spheres />
-        </div>
-
-        <div className="program">
-          <Spheres />
+          <Spheres myDecal={js_logo} />
         </div>
       </div>
 
       <div className="programs">
         <div className="program">
-          <Spheres />
+          <Spheres myDecal={html_logo} />
         </div>
 
         <div className="program">
-          <Spheres />
+          <Spheres myDecal={css_logo} />
         </div>
 
         <div className="program">
-          <Spheres />
+          <Spheres myDecal={react_logo} />
+        </div>
+      </div>
+
+      <div className="programs">
+        <div className="program">
+          <Spheres myDecal={sql_logo} />
+        </div>
+
+        <div className="program">
+          <Spheres myDecal={assembly_logo} />
+        </div>
+
+        <div className="program">
+          <Spheres myDecal={cpp_logo} />
         </div>
       </div>
     </>

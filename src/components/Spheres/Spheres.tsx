@@ -1,37 +1,47 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, useTexture, Decal } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef, useState } from "react";
 import type { Mesh, TextureLoader } from "three";
 import "../Spheres/Spheres.css";
 
-const Spheres = () => {
+type SpheresProps = {
+  myDecal: string;
+};
+
+const Spheres = ({ myDecal }: SpheresProps) => {
   return (
     <Canvas camera={{ position: [0, 0, 2], fov: 75 }}>
       <OrbitControls
         enableDamping
-        dampingFactor={0.03}
+        dampingFactor={0.05}
         enablePan={false}
         enableZoom={false}
       />
       <hemisphereLight
-        color={"#ffffff"}
-        groundColor={"#444444"} // light reflected from below
+        color={"white"}
+        groundColor={"rgba(114, 114, 114, 1)"}
         intensity={1}
       />
-      <AnimatedBox />
+      <AnimatedBox decalImage={myDecal} />
     </Canvas>
   );
 };
 
-function AnimatedBox() {
+type AnimatedBoxProps = {
+  decalImage: string;
+};
+
+function AnimatedBox({ decalImage }: AnimatedBoxProps) {
   const polyRef = useRef<Mesh>(null!);
+  //Texture
+  const texture = useTexture(decalImage);
 
   //Snap back
   const [dragging, setDragging] = useState(false);
   const targetZrotation = 0;
   const targetYrotation = 0;
   const targetXrotation = 0;
-  const damping = 0.005;
+  const damping = 0.01;
 
   useFrame(() => {
     if (!polyRef.current) {
@@ -52,15 +62,26 @@ function AnimatedBox() {
       polyRef.current.rotation.z += (targetZrotation - currentZ) * damping;
     }
   });
+
   return (
     <mesh
-      rotation={[Math.PI / 2, Math.PI / 4, Math.PI / 4]}
+      rotation={[Math.PI / 2, Math.PI / 2, Math.PI / 2]}
       ref={polyRef}
       onPointerDown={() => setDragging(true)}
       onPointerUp={() => setDragging(false)}
     >
-      <icosahedronGeometry args={[1, 0]} />
-      <meshToonMaterial color="wheat" />
+      <icosahedronGeometry args={[1, 2]} />
+      <Decal
+        position={[0, 0, 0]} // Where on the mesh
+        rotation={[0, 0, 0]} // Orientation of decal
+        scale={[1, 1, 2]} // Size of decal
+        map={texture} // The image texture
+        depthTest={true} // Optional for z-fighting
+        // Optional for debugging position
+      />
+      ;
+      <meshStandardMaterial flatShading />
+      <textureLoader />
     </mesh>
   );
 }
