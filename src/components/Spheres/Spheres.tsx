@@ -18,7 +18,7 @@ const Spheres = ({ myDecal }: SpheresProps) => {
         enableZoom={false}
       />
       <hemisphereLight
-        color={"rgba(255, 196, 70, 1)"}
+        color={"rgba(255, 243, 79, 1)"}
         groundColor={"rgba(92, 92, 92, 1)"}
         intensity={1}
       />

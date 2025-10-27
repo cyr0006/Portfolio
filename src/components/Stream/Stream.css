@@ -1,24 +1,20 @@
 
 .about-row {
-  position: relative;
+  position: relative; /* Keep this - it's crucial for absolute positioning */
   display: flex;
-  justify-content: space-between;
-  height: fit-content;
-  width: fit-content;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 400px;
+  width: 90%; /* Changed from fit-content */
+  max-width: 1400px;
   margin-bottom: 20px;
   margin-left: 4vw;
 }
-
-.stream-line-l{
-  position: absolute;
-  top: 0;
-  width: 8px;
-  height: 100%;
-  flex-basis: 40%;
-  background: linear-gradient(to bottom, wheat, rgb(255, 193, 77));
-  border-radius: 3px;
-  animation: pulse 3s infinite ease-in-out;
+.about-container {
+  display: flex;
+  flex-direction: column;
 }
+
 
 .stream-line-r {
   position: absolute;
@@ -29,7 +25,20 @@
   background: linear-gradient(to bottom, wheat, rgb(255, 193, 77));
   border-radius: 3px;
   animation: pulse 3s infinite ease-in-out;
+  z-index: 1; /* Ensure it's visible above background */
 }
+.stream-line-l {
+  position: absolute;
+  left: 0; /* Add this to ensure it's at the left edge */
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, wheat, rgb(255, 193, 77));
+  border-radius: 3px;
+  animation: pulse 3s infinite ease-in-out;
+  z-index: 1; /* Ensure it's visible above background */
+}
+
 
 @keyframes pulse {
   0% { box-shadow: 0 0 5px wheat; }
@@ -62,10 +71,8 @@
   box-sizing: border-box;
   padding: 1rem;
   overflow-wrap: break-word;
-
   justify-content: center;
-  
-
+  align-items: left;
 }
 
 .about-row p{
