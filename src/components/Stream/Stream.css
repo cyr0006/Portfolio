@@ -110,6 +110,17 @@
 
 }
 
+.nested-list {
+  padding-left: 2.5rem;
+  margin-top: 0.5rem;
+  list-style-type: circle; /* Different bullet style for nested items */
+}
+
+.subheading {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 
 /*---- Media Query ----*/
 @media (max-width: 1000px) {
