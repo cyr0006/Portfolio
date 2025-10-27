@@ -53,13 +53,13 @@ function AnimatedBox({ decalImage }: AnimatedBoxProps) {
     }
     if (!dragging) {
       //roattion -> polyRef.current.rotation.z += 0.005;
-      const currentX = polyRef.current.rotation.y;
+      const currentX = polyRef.current.rotation.x;
       polyRef.current.rotation.x += (targetXrotation - currentX) * damping;
 
       const currentY = polyRef.current.rotation.y;
       polyRef.current.rotation.y += (targetYrotation - currentY) * damping;
 
-      const currentZ = polyRef.current.rotation.y;
+      const currentZ = polyRef.current.rotation.z;
       polyRef.current.rotation.z += (targetZrotation - currentZ) * damping;
     }
   });
@@ -87,8 +87,40 @@ function AnimatedBox({ decalImage }: AnimatedBoxProps) {
   );
 }
 function AnimatedMesh() {
+  const polyRef = useRef<Mesh>(null!);
+  //Snap back
+  const [dragging, setDragging] = useState(false);
+  const targetZrotation = 0;
+  const targetYrotation = 0;
+  const targetXrotation = 0;
+  const damping = 0.01;
+
+  useFrame(() => {
+    if (!polyRef.current) {
+      return;
+    }
+    if (dragging) {
+      console.log(dragging);
+    }
+    if (!dragging) {
+      //roattion -> polyRef.current.rotation.z += 0.005;
+      const currentX = polyRef.current.rotation.x;
+      polyRef.current.rotation.x += (targetXrotation - currentX) * damping;
+
+      const currentY = polyRef.current.rotation.y;
+      polyRef.current.rotation.y += (targetYrotation - currentY) * damping;
+
+      const currentZ = polyRef.current.rotation.z;
+      polyRef.current.rotation.z += (targetZrotation - currentZ) * damping;
+    }
+  });
   return (
-    <mesh rotation={[Math.PI / 2, Math.PI / 2, Math.PI / 2]}>
+    <mesh
+      rotation={[Math.PI / 2, Math.PI / 2, Math.PI / 2]}
+      ref={polyRef}
+      onPointerDown={() => setDragging(true)}
+      onPointerUp={() => setDragging(false)}
+    >
       <icosahedronGeometry args={[1.1, 2]} />
       ;
       <meshBasicMaterial wireframe color={"rgba(73, 182, 255, 1)"} />
