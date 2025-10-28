@@ -121,6 +121,40 @@
   margin-bottom: 0.5rem;
 }
 
+section .image-matrix{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 10rem;
+  row-gap: 10rem;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+  padding-left: 6rem;
+}
+.about-row .image-matrix img {
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius:10%;
+  outline: 2px solid wheat;
+  outline-offset: 5px;
+  box-shadow: 0px 0px 20px 5px wheat;
+  animation: glow 2s infinite ease-in-out;
+
+}
+
+.about-row .image-matrix #neo4j_logo  {
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius:10%;
+  outline: 2px solid wheat;
+  outline-offset: 5px;
+}
 
 /*---- Media Query ----*/
 @media (max-width: 1000px) {

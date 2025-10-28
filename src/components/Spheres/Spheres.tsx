@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef, useState } from "react";
 import type { Mesh, TextureLoader, Wir } from "three";
 import "../Spheres/Spheres.css";
+import { all } from "three/tsl";
 
 type SpheresProps = {
   myDecal: string;
@@ -17,11 +18,7 @@ const Spheres = ({ myDecal }: SpheresProps) => {
         enablePan={false}
         enableZoom={false}
       />
-      <hemisphereLight
-        color={"rgba(255, 243, 79, 1)"}
-        groundColor={"rgba(92, 92, 92, 1)"}
-        intensity={1}
-      />
+      <hemisphereLight color={"rgba(255, 240, 152, 1)"} intensity={0.1} />
       <AnimatedBox decalImage={myDecal} />
       <AnimatedMesh />
     </Canvas>
@@ -81,7 +78,11 @@ function AnimatedBox({ decalImage }: AnimatedBoxProps) {
         // Optional for debugging position
       />
       ;
-      <meshStandardMaterial flatShading />
+      <meshStandardMaterial
+        flatShading
+        metalness={20}
+        color={"rgba(255, 223, 116, 1)"}
+      />
       <textureLoader />
     </mesh>
   );
@@ -123,7 +124,7 @@ function AnimatedMesh() {
     >
       <icosahedronGeometry args={[1.1, 2]} />
       ;
-      <meshBasicMaterial wireframe color={"rgba(73, 182, 255, 1)"} />
+      <meshBasicMaterial wireframe color={"rgba(73, 158, 255, 1)"} />
     </mesh>
   );
 }

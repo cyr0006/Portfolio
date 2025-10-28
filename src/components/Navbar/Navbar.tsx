@@ -2,6 +2,7 @@ import "./Navbar.css";
 import logo from "../../assets/Aryan Logo.png";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion, scale } from "framer-motion";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -28,10 +29,14 @@ const Navbar = () => {
           <Link to="/about">About </Link>
         </li>
         <li>
-          <button className="btn">
-            {" "}
-            <Link to="/about">Contact </Link>
-          </button>
+          <motion.button
+            type="submit"
+            className="btn light-btn"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Contact
+          </motion.button>
         </li>
       </ul>
       <svg

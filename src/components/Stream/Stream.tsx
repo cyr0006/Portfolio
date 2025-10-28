@@ -2,6 +2,14 @@ import "./Stream.css";
 import { motion } from "framer-motion";
 import monash_logo from "../../assets/monash_logo.png";
 import cardinia_logo from "../../assets/cardinia_logo.png";
+import react_logo from "../../assets/react-logo.png";
+import neo4j_logo from "../../assets/neo4-logo.png";
+import cassandra_logo from "../../assets/cassandra-logo.png";
+import mongodb_logo from "../../assets/mongodb_logo.png";
+import virtualbox from "../../assets/virtualbox_logo.png";
+import python_logo from "../../assets/python_logo.png";
+import html_logo from "../../assets/html-logo.png";
+import css_logo from "../../assets/css-logo.png";
 
 const Stream = () => {
   return (
@@ -192,7 +200,16 @@ const Stream = () => {
               </ul>
             </motion.div>
           </div>
-          <img src={monash_logo} className="monash_logo" />
+          <div className="image-matrix">
+            <img src={neo4j_logo} id="neo4j_logo" />
+            <img src={cassandra_logo} />
+            <img src={react_logo} />
+            <img src={html_logo} />
+            <img src={css_logo} />
+            <img src={python_logo} />
+            <img src={virtualbox} />
+            <img src={mongodb_logo} />
+          </div>
         </section>
       </div>
     </>
