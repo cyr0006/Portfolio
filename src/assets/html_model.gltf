@@ -1,122 +1,162 @@
 {
-  "asset": {
-    "generator": "SOLIDWORKSGLTF",
-    "version": "2.0"
-  },
-  "scene": 0,
-  "scenes": [
-    {
-      "name": "Default",
-      "nodes": [0, 1]
-    }
-  ],
-  "nodes": [
-    {
-      "matrix": [
-        0.9642510115908612, -0.2603242048617781, -0.04951055452208199, 0.0,
-        -0.11511510983922185, -0.24321757024614363, -0.9631166725845142, 0.0,
-        0.2386807452072851, 0.9343856387416521, -0.264490037582987, 0.0,
-        1.3718180752934905, 3.488182710877864, -1.439056357774211, 1.0
-      ],
-      "camera": 0,
-      "name": "current camera"
+    "asset": {
+        "generator": "SOLIDWORKSGLTF",
+        "version": "2.0"
     },
-    {
-      "mesh": 0,
-      "name": "Part1"
-    }
-  ],
-  "cameras": [
-    {
-      "type": "orthographic",
-      "orthographic": {
-        "xmag": 1.0009923178824756,
-        "ymag": 0.7734940638182765,
-        "zfar": 4.548552185469642,
-        "znear": 3.2868230207531703
-      }
-    }
-  ],
-  "meshes": [
-    {
-      "primitives": [
+    "scene": 0,
+    "scenes": [
         {
-          "attributes": {
-            "POSITION": 1,
-            "NORMAL": 2
-          },
-          "indices": 0,
-          "material": 0,
-          "mode": 4
+            "name": "Default",
+            "nodes": [
+                0,
+                1
+            ]
         }
-      ]
-    }
-  ],
-  "accessors": [
-    {
-      "bufferView": 0,
-      "byteOffset": 0,
-      "componentType": 5125,
-      "count": 3414,
-      "type": "SCALAR",
-      "min": [0],
-      "max": [1793]
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 0,
-      "componentType": 5126,
-      "count": 1794,
-      "type": "VEC3",
-      "min": [0.2326056957244873, -0.002718683797866106, -0.7923811674118042],
-      "max": [0.7412607669830322, 0.050802577286958694, -0.12459114193916321]
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 0,
-      "componentType": 5126,
-      "count": 1794,
-      "type": "VEC3",
-      "min": [-1.0, -1.0, -1.0],
-      "max": [1.0, 1.0, 1.0]
-    }
-  ],
-  "materials": [
-    {
-      "name": "whitehighglossplastic",
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [1.0, 1.0, 1.0, 1.0],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.16999999880790712
-      }
-    }
-  ],
-  "bufferViews": [
-    {
-      "buffer": 0,
-      "byteOffset": 0,
-      "byteLength": 13656,
-      "target": 34963
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 13656,
-      "byteLength": 21528,
-      "byteStride": 12,
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 35184,
-      "byteLength": 21528,
-      "byteStride": 12,
-      "target": 34962
-    }
-  ],
-  "buffers": [
-    {
-      "uri": "Part1.bin",
-      "byteLength": 56712
-    }
-  ]
+    ],
+    "nodes": [
+        {
+            "matrix": [
+                0.9642510115908612,
+                -0.2603242048617781,
+                -0.04951055452208199,
+                0.0,
+                -0.11511510983922185,
+                -0.24321757024614363,
+                -0.9631166725845142,
+                0.0,
+                0.2386807452072851,
+                0.9343856387416521,
+                -0.264490037582987,
+                0.0,
+                1.3718180752934905,
+                3.488182710877864,
+                -1.439056357774211,
+                1.0
+            ],
+            "camera": 0,
+            "name": "current camera"
+        },
+        {
+            "mesh": 0,
+            "name": "Part1"
+        }
+    ],
+    "cameras": [
+        {
+            "type": "orthographic",
+            "orthographic": {
+                "xmag": 1.0009923178824756,
+                "ymag": 0.7734940638182765,
+                "zfar": 4.548552185469642,
+                "znear": 3.2868230207531703
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 1,
+                        "NORMAL": 2
+                    },
+                    "indices": 0,
+                    "material": 0,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 3414,
+            "type": "SCALAR",
+            "min": [
+                0
+            ],
+            "max": [
+                1793
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1794,
+            "type": "VEC3",
+            "min": [
+                0.2326056957244873,
+                -0.002718683797866106,
+                -0.7923811674118042
+            ],
+            "max": [
+                0.7412607669830322,
+                0.050802577286958694,
+                -0.12459114193916321
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1794,
+            "type": "VEC3",
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "whitehighglossplastic",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.16999999880790712
+            }
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 13656,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 13656,
+            "byteLength": 21528,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 35184,
+            "byteLength": 21528,
+            "byteStride": 12,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "uri": "Part1.bin",
+            "byteLength": 56712
+        }
+    ]
 }

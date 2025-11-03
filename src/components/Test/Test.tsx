@@ -1,13 +1,12 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
-import model from "../../assets/html_model.gltf";
 
 const Model = () => {
-  const gltf = useGLTF(model);
+  const gltf = useGLTF("/html_model.gltf");
   return <primitive object={gltf.scene} />;
 };
 
-const Test = () => {
+const Tests = () => {
   return (
     <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
       <ambientLight />
@@ -18,4 +17,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Tests;
