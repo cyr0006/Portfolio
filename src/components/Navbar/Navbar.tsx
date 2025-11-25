@@ -39,7 +39,7 @@ const Navbar = () => {
           </motion.button>
         </li>
       </ul>
-      <svg
+      <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="16"
@@ -47,12 +47,14 @@ const Navbar = () => {
         className="bi bi-list"
         viewBox="0 0 16 16"
         onClick={toggleMenu}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
       >
         <path
           fill-rule="evenodd"
           d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
         />
-      </svg>
+      </motion.svg>
     </nav>
   );
 };
