@@ -117,3 +117,16 @@ img.cpp_logo{
   height: auto;
   display: block;
 }
+
+@media (max-width: 768px) {
+    .programs {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .program {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
