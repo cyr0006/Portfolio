@@ -12,23 +12,19 @@ const Stream = () => {
           <div className="stream-line-l" />
           <div className="content-blocks-l">
             <h2>Qualifications</h2>
-            <ul>
-              <li>
-                <motion.div
-                  className="block"
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <h3>Bachelor of Software Engineering (Honors)</h3>
+            <motion.div
+              className="block"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3>Bachelor of Software Engineering (Honors)</h3>
 
-                  <p>
-                    Currently undertaking a bachelor of Software Engineering
-                    (Honours) at Monash University, Clayton Campus.
-                  </p>
-                </motion.div>
-              </li>
-            </ul>
+              <p>
+                Currently undertaking a bachelor of Software Engineering
+                (Honours) at Monash University, Clayton Campus.
+              </p>
+            </motion.div>
           </div>
           <img src={monash_logo} className="monash_logo" />
         </section>
@@ -39,28 +35,23 @@ const Stream = () => {
           <img src={cardinia_logo} className="cardinia_logo" />
           <div className="content-blocks-r">
             <h2>Experience</h2>
-
-            <ul>
-              <li>
-                <motion.div
-                  className="block"
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <h3>
-                    Customer Support Officer - Cardinia Shire Council (2023 -
-                    present)
-                  </h3>
-                  <p>
-                    I am currently a member of Cardinia Shire Council Customer
-                    Service team. This roles has allowed me to cultivate a
-                    myriad of soft skills, which are invaluable in an team or
-                    client facing environment.
-                  </p>
-                </motion.div>
-              </li>
-            </ul>
+            <motion.div
+              className="block"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3>
+                Customer Support Officer - Cardinia Shire Council (2023 -
+                present)
+              </h3>
+              <p>
+                I am currently a member of Cardinia Shire Council Customer
+                Service team. This roles has allowed me to cultivate a myriad of
+                soft skills, which are invaluable in an team or client facing
+                environment.
+              </p>
+            </motion.div>
           </div>
         </section>
       </div>
@@ -192,10 +183,12 @@ const Stream = () => {
             </motion.div>
           </div>
         </section>
-        <section>
-          <div className="stream-line-r" />
-          <Programs />
-        </section>
+        <div className="about-container">
+          <section className="about-row">
+            <div className="stream-line-r" />
+            <Programs />
+          </section>
+        </div>
       </div>
     </>
   );
