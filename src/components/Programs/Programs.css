@@ -47,6 +47,7 @@
     
 }
 
+
 .caption svg{
     width: 100px;
     height: 100px;
@@ -61,55 +62,6 @@
 
 
     
-}
-
-.python_logo {
-  width: 200px;
-  height: auto;
-  display: block;
-}
-
-
-img.java_logo{
-  width: 200px;
-  height: auto;
-  display: block;
-}
-img.js_logo{
-  width: 150px;
-  height: auto;
-  display: block;
-}
-img.html_logo{
-  width: 90px;
-  height: auto;
-  display: block;
-}
-
-img.css_logo{
-  width: 70px;
-  height: auto;
-  display: block;
-}
-img.react_logo{
-  width: 150px;
-  height: auto;
-  display: block;
-}
-img.sql_logo{
-  width: 100px;
-  height: auto;
-  display: block;
-}
-img.assembly_logo{
-  width: 80px;
-  height: auto;
-  display: block;
-}
-img.cpp_logo{
-  width: 70px;
-  height: auto;
-  display: block;
 }
 
 @media (max-width: 1024px) {

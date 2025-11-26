@@ -14,7 +14,6 @@ const App = () => {
       <Hero />
       <div className="container">
         <Title subtitle="Languages" title="My Arsenal" />
-        <Programs />
         <About />
         <Title subtitle="From Databases to VM-ware" title="Tools that I use" />
         <Frameworks />

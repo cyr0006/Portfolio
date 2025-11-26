@@ -10,6 +10,7 @@ import virtualbox from "../../assets/virtualbox_logo.png";
 import python_logo from "../../assets/python_logo.png";
 import html_logo from "../../assets/html-logo.png";
 import css_logo from "../../assets/css-logo.png";
+import Programs from "../Programs/Programs";
 
 const Stream = () => {
   return (
@@ -200,17 +201,8 @@ const Stream = () => {
               </ul>
             </motion.div>
           </div>
-          <div className="image-matrix">
-            <img src={neo4j_logo} id="neo4j_logo" />
-            <img src={cassandra_logo} />
-            <img src={react_logo} />
-            <img src={html_logo} />
-            <img src={css_logo} />
-            <img src={python_logo} />
-            <img src={virtualbox} />
-            <img src={mongodb_logo} />
-          </div>
         </section>
+        <Programs />
       </div>
     </>
   );
