@@ -1,44 +1,52 @@
-
-.about-row {
-  position: relative; /* Keep this - it's crucial for absolute positioning */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 400px;
-  width: 90%; /* Changed from fit-content */
-  max-width: 1400px;
-  margin-bottom: 20px;
-  margin-left: 4vw;
-}
 .about-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
 }
 
+.about-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+  margin-bottom: clamp(40px, 6vw, 80px);
+  gap: clamp(20px, 4vw, 60px);
+  padding: clamp(20px, 3vw, 40px);
+}
 
+/* Alternate row directions for left/right alignment */
+.about-row:nth-child(odd) {
+  flex-direction: row; /* Image on right */
+}
+
+.about-row:nth-child(even) {
+  flex-direction: row-reverse; /* Image on left */
+}
+
+.stream-line-l,
 .stream-line-r {
   position: absolute;
-  right: 0;
   top: 0;
-  width: 8px;
+  width: clamp(4px, 0.8vw, 8px);
   height: 100%;
   background: linear-gradient(to bottom, wheat, rgb(255, 193, 77));
   border-radius: 3px;
   animation: pulse 3s infinite ease-in-out;
-  z-index: 1; /* Ensure it's visible above background */
-}
-.stream-line-l {
-  position: absolute;
-  left: 0; /* Add this to ensure it's at the left edge */
-  top: 0;
-  width: 8px;
-  height: 100%;
-  background: linear-gradient(to bottom, wheat, rgb(255, 193, 77));
-  border-radius: 3px;
-  animation: pulse 3s infinite ease-in-out;
-  z-index: 1; /* Ensure it's visible above background */
+  z-index: 1;
 }
 
+.stream-line-l {
+  left: 0;
+}
+
+.stream-line-r {
+  right: 0;
+}
 
 @keyframes pulse {
   0% { box-shadow: 0 0 5px wheat; }
@@ -46,88 +54,179 @@
   100% { box-shadow: 0 0 5px rgb(228, 187, 110); }
 }
 
-.content-blocks-l {
-  margin-left: 50px;
+.content-blocks-l,
+.content-blocks-r {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: clamp(1rem, 2vw, 1.5rem);
   color: white;
-  flex-basis: 50%;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 1rem;
-  overflow-wrap: break-word;
-
+  flex: 1;
+  min-width: 0; /* Important for text wrapping */
+  padding-left: clamp(30px, 5vw, 60px);
+  z-index: 2;
 }
 
 .content-blocks-r {
-  margin-left: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  color: white;
-  flex-basis: 50%;
+  padding-right: clamp(30px, 5vw, 60px);
+  padding-left: 1rem;
+}
+
+.about-row p {
   width: 100%;
-  box-sizing: border-box;
-  padding: 1rem;
-  overflow-wrap: break-word;
-  justify-content: center;
-  align-items: left;
+  line-height: 1.6;
+  font-size: clamp(14px, 1.5vw, 16px);
+  margin: 0.5rem 0;
 }
 
-.about-row p{
-    width: 99%;
+.about-row h2 {
+  color: wheat;
+  font-weight: 600;
+  font-size: clamp(24px, 4vw, 35px);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
 }
 
-.about-row  h2{
-    color: wheat;
-    font-weight: 600;
-    font-size: 35px;
-    margin: 10px 0;
-    max-width: 400px;
+.about-row h3 {
+  color: white;
+  font-weight: 600;
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
 }
 
-.about-row  h3{
-      color: white;
-    font-weight: 600;
-    font-size: 20px;
-    
+.about-row h4 {
+  color: wheat;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 500;
 }
 
-.about-row .monash_logo{
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display:flex;
-  align-self: center;
-  flex-basis: 10%;
-
+.block {
+  background: rgba(255, 255, 255, 0.03);
+  padding: clamp(12px, 2vw, 20px);
+  border-radius: 8px;
+  border-left: 3px solid wheat;
+  transition: all 0.3s ease;
 }
-.about-row .cardinia_logo{
-  height: 300px;
-  width: 300px;
+
+.block:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(5px);
+}
+
+/* Logo styling */
+.about-row .monash_logo,
+.about-row .cardinia_logo {
+  max-width: clamp(150px, 25vw, 300px);
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.about-row .cardinia_logo {
   border-radius: 20px;
-
+  aspect-ratio: 1;
 }
 
 .nested-list {
-  padding-left: 2.5rem;
+  padding-left: clamp(1.5rem, 3vw, 2.5rem);
   margin-top: 0.5rem;
-  list-style-type: circle; /* Different bullet style for nested items */
+  list-style-type: circle;
+}
+
+.nested-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-size: clamp(13px, 1.4vw, 15px);
 }
 
 .subheading {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  color: wheat;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-row {
+    min-height: 300px;
+    gap: 30px;
+  }
 
-/*---- Media Query ----*/
-@media (max-width: 1000px) {
-    .logo{
-        width: 20px;
-    }
-    nav ul li{
-        margin: 10px 15px;
-    }
+  .about-row .monash_logo,
+  .about-row .cardinia_logo {
+    max-width: 200px;
+  }
+}
+
+/* Tablet Portrait & Mobile */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0 15px;
+  }
+
+  .about-row {
+    flex-direction: column !important; /* Override alternating layout */
+    min-height: auto;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  /* Center align content on mobile */
+  .content-blocks-l,
+  .content-blocks-r {
+    padding-left: 30px;
+    padding-right: 15px;
+    text-align: left;
+  }
+
+  /* Place images above content on mobile */
+  .about-row .monash_logo,
+  .about-row .cardinia_logo {
+    order: -1; /* Move image to top */
+    max-width: 180px;
+    margin: 0 auto 20px auto;
+  }
+
+  .block {
+    padding: 15px;
+  }
+
+  .nested-list {
+    padding-left: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0 10px;
+  }
+
+  .about-row {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .content-blocks-l,
+  .content-blocks-r {
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  .about-row .monash_logo,
+  .about-row .cardinia_logo {
+    max-width: 140px;
+  }
+
+  .stream-line-l,
+  .stream-line-r {
+    width: 4px;
+  }
+
+  .block {
+    padding: 12px;
+    border-left-width: 2px;
+  }
 }

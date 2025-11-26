@@ -28,9 +28,6 @@ const Programs = () => {
         <div className="program">
           <Spheres myDecal={js_logo} />
         </div>
-      </div>
-
-      <div className="programs">
         <div className="program">
           <Spheres myDecal={html_logo} />
         </div>
@@ -42,9 +39,6 @@ const Programs = () => {
         <div className="program">
           <Spheres myDecal={react_logo} />
         </div>
-      </div>
-
-      <div className="programs">
         <div className="program">
           <Spheres myDecal={sql_logo} />
         </div>
