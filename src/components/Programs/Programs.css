@@ -1,10 +1,10 @@
 .programs{
     margin: 80px auto;
     width: 80%;
-    height: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 20px 0;
 }
 
 .programs img{
@@ -16,16 +16,10 @@
 }
 
 .program{
-    flex-basis: 31%;   
+    aspect-ratio: 1; /* Maintains square shape */
     position: relative;
-    height: inherit;
-    width: inherit;
-    justify-self: center;
-    justify-content: center;
-    align-content: center;
     border-radius: 10px;
-
-
+    min-height: 250px;
 }
 
 
@@ -118,15 +112,40 @@ img.cpp_logo{
   display: block;
 }
 
+@media (max-width: 1024px) {
+    .programs {
+        width: 85%;
+        gap: 30px;
+    }
+    
+    .program {
+        min-height: 220px;
+    }
+}
+
+/* Tablet portrait */
 @media (max-width: 768px) {
     .programs {
-        flex-direction: column;
-        height: auto;
         width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
     }
-
+    
     .program {
-        flex-basis: 100%;
-        margin-bottom: 20px;
+        min-height: 200px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .programs {
+        width: 95%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        margin: 40px auto;
+    }
+    
+    .program {
+        min-height: 150px;
     }
 }
