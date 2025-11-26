@@ -9,21 +9,23 @@ import { useRef } from "react";
 
 const Frameworks = () => {
   const slider = useRef<HTMLUListElement>(null);
-  let tx = 0;
+  const txRef = useRef(0);
+  const totalSlides = 4;
+  const slideWidth = 100 / totalSlides;
 
   const slideFwd = () => {
-    if (tx > -50) {
-      tx -= 25;
+    if (txRef.current > -(100 - slideWidth - slideWidth)) {
+      txRef.current -= slideWidth;
     }
-    slider.current!.style.transform = `translateX(${tx}%)`;
-    console.log(tx);
+    slider.current!.style.transform = `translateX(${txRef.current}%)`;
+    console.log(txRef.current);
   };
   const slideBwd = () => {
-    if (tx < 0) {
-      tx += 25;
+    if (txRef.current < 0) {
+      txRef.current += slideWidth;
     }
-    slider.current!.style.transform = `translateX(${tx}%)`;
-    console.log(tx);
+    slider.current!.style.transform = `translateX(${txRef.current}%)`;
+    console.log(txRef.current);
   };
 
   return (
