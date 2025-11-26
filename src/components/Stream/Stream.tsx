@@ -24,9 +24,7 @@ const Stream = () => {
 
                   <p>
                     Currently undertaking a bachelor of Software Engineering
-                    (Honours) at Monash University, Clayton Campus. Upon the
-                    completion of my course, I aim to professionally mog even
-                    the most renouned engineers in the industry.
+                    (Honours) at Monash University, Clayton Campus.
                   </p>
                 </motion.div>
               </li>
@@ -194,7 +192,10 @@ const Stream = () => {
             </motion.div>
           </div>
         </section>
-        <Programs />
+        <section>
+          <div className="stream-line-r" />
+          <Programs />
+        </section>
       </div>
     </>
   );
