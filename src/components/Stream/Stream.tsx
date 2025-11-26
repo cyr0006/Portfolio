@@ -183,12 +183,12 @@ const Stream = () => {
             </motion.div>
           </div>
         </section>
-        <div className="about-container">
-          <section className="about-row">
-            <div className="stream-line-r" />
-            <Programs />
-          </section>
-        </div>
+      </div>
+      <div className="about-container">
+        <section className="about-row">
+          <div className="stream-line-r" />
+          <Programs />
+        </section>
       </div>
     </>
   );

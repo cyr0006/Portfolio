@@ -13,7 +13,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <div className="container">
-        <Title subtitle="Languages" title="My Arsenal" />
+        <Title subtitle="About Me" title="Details" />
         <About />
         <Title subtitle="From Databases to VM-ware" title="Tools that I use" />
         <Frameworks />
