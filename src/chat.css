@@ -1,0 +1,7 @@
+/* chatbot.css */
+.chatbot-root {
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+}
+

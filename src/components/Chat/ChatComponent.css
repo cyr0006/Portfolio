@@ -1,3 +1,4 @@
+
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 
@@ -16,7 +17,7 @@
 .animate-pulse-glow {
   animation: pulse-glow 5s ease-in-out infinite;
 }
-body {
+.chatbot-root {
   margin: 0;
   padding: 0;
   background-color: #050011;
