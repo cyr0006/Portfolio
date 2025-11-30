@@ -1,3 +1,4 @@
+/* ChatComponent.css - All chat styles consolidated */
 
 @keyframes pulse-glow {
   0%, 100% {
@@ -14,11 +15,136 @@
   }
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 5s ease-in-out infinite;
-}
 .chatbot-root {
   margin: 0;
-  padding: 0;
+  padding: 80px;
   background-color: #050011;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background-color: rgba(39, 41, 72, 0.95);
+  border-radius: 8px;
+  animation: pulse-glow 5s ease-in-out infinite;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chat-header {
+  padding: 16px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  background-color: rgba(8, 0, 58, 0.945);
+  display: flex;
+  color: #f5dec3;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message {
+  padding: 12px;
+  border-radius: 8px;
+  max-width: 75%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: #f5dec3;
+  color: rgba(8, 0, 58, 0.945);
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+.message.assistant {
+  background-color: rgba(8, 0, 58, 0.945);
+  color: #d1d5db;
+  align-self: flex-start;
+}
+
+.message-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.message-sender,
+.message-timestamp {
+  font-weight: 300;
+  font-size: 8px;
+  line-height: 1;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: rgba(8, 0, 58, 0.945);
+  border-radius: 0 0 8px 8px;
+  gap: 8px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: white;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.chat-input:focus {
+  box-shadow: inset 0 1px 3px rgba(100, 100, 100, 0.3);
+  transform: scale(1.01);
+}
+
+.send-button {
+  padding: 8px;
+  color: #f5dec3;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .chatbot-root {
+    padding: 20px;
+  }
+  
+  .chat-container {
+    height: 85vh;
+  }
+  
+  .message {
+    max-width: 85%;
+  }
 }

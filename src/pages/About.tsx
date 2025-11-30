@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <div className="container">
+      <div className="page-container">
         <Abt />
         <Stream></Stream>
       </div>

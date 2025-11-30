@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <Navbar />
       <Hero />
-      <div className="container">
+      <div className="page-container">
         <Title subtitle="About Me" title="Details" />
         <About />
         <Title subtitle="From Databases to VM-ware" title="Tools that I use" />
