@@ -61,7 +61,7 @@ const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
         <div className="flex items-center p-4 bg-[rgba(8,0,58,0.945)] rounded-b-lg">
           <input
             type="text"
-            className="flex-1 p-2 rounded-lg focus:outline-none bg-white  inset-shadow-sm inset-shadow-[#000000] focus:inset-shadow-[#646464] focus:scale-[1.01] transition-all transform "
+            className="flex-1 p-2 rounded-lg focus:outline-none bg-white shadow-inner shadow-[inset_0_1px_2px_#000000] focus:shadow-[inset_0_1px_2px_#646464] focus:scale-[1.01] transition-all transform "
             placeholder="Your Message Here"
             value={input}
             onChange={(e) => setInput(e.target.value)}
