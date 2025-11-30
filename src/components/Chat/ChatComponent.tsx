@@ -4,7 +4,7 @@ import useChatbot from "../../hooks/useChatbot";
 import type { Message } from "../../hooks/useChatbot";
 import Markdown from "react-markdown";
 import useChatScroll from "../../hooks/useChatScroll";
-import "./ChatComponent.module.css";
+import "./ChatComponent.css";
 type IChatComponentProps = {};
 
 const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
@@ -73,7 +73,7 @@ const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
           />
           <button
             onClick={handleSend}
-            className="p-2 text-[#f5dec3] cursor-pointer hover:text-white hover:scale-110 transition-transform"
+            className=" p-2 text-[#f5dec3] cursor-pointer hover:text-white hover:scale-110 transition-transform"
           >
             <LuSendHorizontal size={25} />
           </button>
