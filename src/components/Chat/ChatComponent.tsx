@@ -4,7 +4,7 @@ import useChatbot from "../../hooks/useChatbot";
 import type { Message } from "../../hooks/useChatbot";
 import Markdown from "react-markdown";
 import useChatScroll from "../../hooks/useChatScroll";
-import "./ChatComponent.css";
+import "./ChatComponent.module.css";
 type IChatComponentProps = {};
 
 const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
