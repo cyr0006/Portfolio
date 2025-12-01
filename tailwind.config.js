@@ -12,6 +12,6 @@ export default {
   plugins: [],
   // IMPORTANT: Disable Tailwind's base reset styles
   corePlugins: {
-    preflight: true, // ← This prevents Tailwind from resetting your CSS
+    preflight: true,
   }
 }
