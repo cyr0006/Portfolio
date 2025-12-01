@@ -9,10 +9,11 @@ const Hero = () => {
       <div className="hero-text">
         <h1>Welcome</h1>
         <p>
-          Your time is your currency, and wasting your's looking for that one
-          particular bit of information is deeply inflationary.
+          Looking for that one particular bit of information in a sea of
+          details? My AI-powered chat tool is here to help! Just ask, and let
+          the AI do the rest.
         </p>
-        <p>Click the button below to ask my AI Instead.</p>
+        <p>Click the button below to ask my AI anything!.</p>
         <Link to="/chat">
           <motion.button
             type="submit"
