@@ -121,7 +121,7 @@ const Frameworks = () => {
 
               <p>
                 Whether it's web servers, APIs, or databases. Node.js not only
-                delivers, but does so under pressure. A little like Postman Pat.
+                delivers, but does so quickly and at scale.
               </p>
             </div>
           </li>
