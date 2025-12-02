@@ -13,9 +13,13 @@ nav{
     z-index: 10;
     height: fit-content;
 }
-
+.logo-link {
+    display: inline-block; 
+    text-decoration: none;  
+    line-height: 0;          
+}
 .logo{
-    width: 4%;
+    width: 20%;
     border-radius: 12%;
 }
 

@@ -20,7 +20,9 @@ const Navbar = () => {
 
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-      <img src={logo} alt="" className="logo" />
+      <Link to="/home">
+        <img src={logo} alt="" className="logo" />
+      </Link>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <Link to="/">Home </Link>
