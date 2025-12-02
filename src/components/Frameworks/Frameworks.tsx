@@ -1,7 +1,7 @@
 import "../Frameworks/Frameworks.css";
 import { motion, scale } from "framer-motion";
 
-import react_logo from "../../assets/react-logo.png";
+import react_logo from "../../assets/react_logo.svg";
 import mongodb_logo from "../../assets/mongodb_logo.png";
 import nodejs_logo from "../../assets/nodejs_logo.png";
 import virtualbox_logo from "../../assets/virtualbox_logo.png";
