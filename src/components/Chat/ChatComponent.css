@@ -21,3 +21,16 @@
   animation: pulse-glow 5s ease-in-out infinite;
 }
 
+body {
+  background-color: #050011;
+  padding: 0%;
+
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #050011; /* keep your background */
+}

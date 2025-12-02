@@ -20,7 +20,7 @@ const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
   };
 
   return (
-    <div className="p-20 bg-[#050011] min-h-screen">
+    <div className="p-20 bg-[#050011] min-h-90">
       <div className="flex flex-col h-[80vh] bg-[rgba(39,41,72,0.95)] animate-pulse-glow rounded-[15px] shadow-md">
         <h2 className="p-4 font-semibold text-lg text-center bg-[rgba(8,0,58,0.945)] flex text-[#f5dec3] justify-center items-center gap-2 rounded-t-lg">
           Aryan's Chatbot <LuBot size={25} />
