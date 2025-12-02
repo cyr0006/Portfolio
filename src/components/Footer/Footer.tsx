@@ -12,7 +12,14 @@ const Footer = () => {
           <Link to="/about">About </Link>
         </li>
         <li>
-          <Link to="/">Contact</Link>
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo({ top: 2150, behavior: "smooth" });
+            }}
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </div>

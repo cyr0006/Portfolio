@@ -1,6 +1,7 @@
 import * as React from "react";
 import ChatComponent from "../components/Chat/ChatComponent";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 const Chat: React.FunctionComponent = () => {
   return (
@@ -11,6 +12,7 @@ const Chat: React.FunctionComponent = () => {
           <ChatComponent />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
