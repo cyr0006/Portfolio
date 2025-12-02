@@ -3,6 +3,7 @@ import logo from "../../assets/Aryan Logo.png";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, scale } from "framer-motion";
+import ScrollToTop from "../../hooks/linkScroll";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -20,25 +21,37 @@ const Navbar = () => {
 
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-      <Link to="/home">
+      <Link to="/" className="logo-link" onClick={ScrollToTop}>
         <img src={logo} alt="" className="logo" />
       </Link>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
-          <Link to="/">Home </Link>
+          <Link to="/" onClick={ScrollToTop}>
+            Home{" "}
+          </Link>
         </li>
         <li>
-          <Link to="/about">About </Link>
+          <Link to="/about" onClick={ScrollToTop}>
+            About{" "}
+          </Link>
         </li>
         <li>
-          <motion.button
-            type="submit"
-            className="btn light-btn"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo({ top: 2150, behavior: "smooth" });
+              toggleMenu();
+            }}
           >
-            Contact
-          </motion.button>
+            <motion.button
+              type="submit"
+              className="btn light-btn"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Contact
+            </motion.button>
+          </Link>
         </li>
       </ul>
       <motion.svg

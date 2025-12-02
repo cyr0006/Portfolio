@@ -3,10 +3,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Test from "./pages/Test";
 import Chat from "./pages/Chat";
-
+import ScrollToTop from "./hooks/linkScroll";
+import type { i } from "framer-motion/client";
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="/about" element={<About />} />
