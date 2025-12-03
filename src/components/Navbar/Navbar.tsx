@@ -27,12 +27,12 @@ const Navbar = () => {
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <Link to="/" onClick={ScrollToTop}>
-            Home{" "}
+            Home
           </Link>
         </li>
         <li>
           <Link to="/about" onClick={ScrollToTop}>
-            About{" "}
+            About
           </Link>
         </li>
         <li>
