@@ -1,9 +1,8 @@
 import { OrbitControls, useTexture, Decal } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef, useState } from "react";
-import type { Mesh, TextureLoader } from "three";
+import type { Mesh } from "three";
 import "../Spheres/Spheres.css";
-import { all } from "three/tsl";
 
 type SpheresProps = {
   myDecal: string;

@@ -7,7 +7,6 @@ import matlab_logo from "../../assets/matlab_logo.svg";
 import bash_logo from "../../assets/bash_logo.svg";
 import react_logo from "../../assets/react_logo.svg";
 import sql_logo from "../../assets/sql_logo.svg";
-import assembly_logo from "../../assets/assembly-logo.png";
 import cpp_logo from "../../assets/cpp_logo.svg";
 import tw_logo from "../../assets/tw_logo.svg";
 import cassandra_logo from "../../assets/cassandra_logo.svg";
@@ -15,7 +14,6 @@ import neo4j_logo from "../../assets/neo4j_logo.svg";
 import mongodb_logo from "../../assets/mongodb_logo.svg";
 
 import Spheres from "../Spheres/Spheres";
-import { js } from "three/tsl";
 
 const Programs = () => {
   return (

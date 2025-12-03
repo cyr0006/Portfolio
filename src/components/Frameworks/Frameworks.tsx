@@ -1,5 +1,5 @@
 import "../Frameworks/Frameworks.css";
-import { motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 
 import react_logo from "../../assets/react_logo.svg";
 import mongodb_logo from "../../assets/mongodb_logo.png";

@@ -2,7 +2,7 @@ import "./Navbar.css";
 import logo from "../../assets/Aryan Logo.png";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 import ScrollToTop from "../../hooks/linkScroll";
 
 const Navbar = () => {

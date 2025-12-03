@@ -1,6 +1,6 @@
 import "./Hero.css";
 import r_arrow from "../../assets/r-arrow.png";
-import { motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Hero = () => {

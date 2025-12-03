@@ -1,9 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
-import Programs from "../components/Programs/Programs";
 import Title from "../components/Title/Title";
 import Footer from "../components/Footer/Footer";
-import About from "../components/About/About";
 import AboutMain from "../components/About/AboutMain";
 import Frameworks from "../components/Frameworks/Frameworks";
 import { Contact } from "../components/Contact/Contact";
