@@ -16,7 +16,7 @@ const AboutMain = () => {
         <h2>Software Engineer - Problem Solver - Critical Thinker</h2>
         <p>
           My name is Aryan Cyrus. I am a final year student from Monash
-          Univeristy. I am currently finishing my final year of Bachelor of
+          University. I am currently finishing my final year of Bachelor of
           Software Engineering (Hon).
         </p>
         <p>
