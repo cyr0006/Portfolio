@@ -20,47 +20,46 @@ const Programs = () => {
     <>
       <div className="programs">
         <div className="program">
-          <Spheres myDecal={python_logo} />
+          <Spheres myDecal={python_logo} colour={"rgba(97, 171, 255, 1)"} />
+        </div>
+        <div className="program">
+          <Spheres myDecal={java_logo} colour={"rgba(255, 100, 100, 1)"} />
         </div>
 
         <div className="program">
-          <Spheres myDecal={java_logo} />
+          <Spheres myDecal={js_logo} colour={"rgba(255, 200, 0, 1)"} />
         </div>
 
         <div className="program">
-          <Spheres myDecal={js_logo} />
+          <Spheres myDecal={bash_logo} colour={"rgba(100, 255, 100, 1)"} />
         </div>
 
         <div className="program">
-          <Spheres myDecal={bash_logo} />
+          <Spheres myDecal={tw_logo} colour={"rgb(0, 188, 255)"} />
+        </div>
+        <div className="program">
+          <Spheres myDecal={sql_logo} colour={"rgba(100, 100, 255, 1)"} />
         </div>
 
         <div className="program">
-          <Spheres myDecal={tw_logo} />
+          <Spheres myDecal={react_logo} colour={"rgba(0, 255, 255, 1)"} />
         </div>
         <div className="program">
-          <Spheres myDecal={sql_logo} />
-        </div>
-
-        <div className="program">
-          <Spheres myDecal={react_logo} />
-        </div>
-        <div className="program">
-          <Spheres myDecal={matlab_logo} />
+          <Spheres myDecal={matlab_logo} colour={"rgb(253, 132, 67)"} />
         </div>
 
         <div className="program">
-          <Spheres myDecal={cpp_logo} />
+          <Spheres myDecal={cpp_logo} colour={"rgb(0, 68, 130)"} />
         </div>
         <div className="program">
-          <Spheres myDecal={cassandra_logo} />
+          <Spheres myDecal={cassandra_logo} colour={"rgb(186, 230, 250)"} />
         </div>
         <div className="program">
-          <Spheres myDecal={neo4j_logo} />
+          <Spheres myDecal={neo4j_logo} colour={"rgb(1, 139, 255)"} />
         </div>
 
         <div className="program">
-          <Spheres myDecal={mongodb_logo} />
+          <Spheres myDecal={mongodb_logo} colour={"rgb(70, 160, 55)"} />
         </div>
       </div>
     </>
