@@ -1,5 +1,8 @@
 import "../About/About.css";
-import bust from "../../assets/bust.jpg";
+import acyrus1 from "../../assets/acyrus1.jpg";
+import acyrus2 from "../../assets/acyrus2.jpg";
+import acyrus3 from "../../assets/acyrus3.jpg";
+import acyrus4 from "../../assets/acyrus4.jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import r_arrow from "../../assets/r-arrow.png";
@@ -8,7 +11,10 @@ const AboutMain = () => {
   return (
     <div className="about">
       <div className="about-left">
-        <img src={bust} alt="" className="about-img" />
+        <img src={acyrus1} alt="" className="about-img" />
+        <img src={acyrus4} alt="" className="about-img" />
+        <img src={acyrus3} alt="" className="about-img" />
+        <img src={acyrus2} alt="" className="about-img" />
       </div>
 
       <div className="about-right">
