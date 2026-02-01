@@ -1,6 +1,5 @@
 import "../About/About.css";
 import acyrus1 from "../../assets/acyrus1.jpg";
-import acyrus2 from "../../assets/acyrus2.jpg";
 import acyrus3 from "../../assets/acyrus3.jpg";
 import acyrus4 from "../../assets/acyrus4.jpg";
 const About = () => {
