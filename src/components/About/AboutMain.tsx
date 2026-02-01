@@ -11,10 +11,24 @@ const AboutMain = () => {
   return (
     <div className="about">
       <div className="about-left">
-        <img src={acyrus1} alt="" className="about-img" />
-        <img src={acyrus4} alt="" className="about-img" />
-        <img src={acyrus3} alt="" className="about-img" />
-        <img src={acyrus2} alt="" className="about-img" />
+        <img
+          src={acyrus1}
+          alt=""
+          className="about-img"
+          style={{ borderRadius: "10px" }}
+        />
+        <img
+          src={acyrus4}
+          alt=""
+          className="about-img"
+          style={{ borderRadius: "10px" }}
+        />
+        <img
+          src={acyrus3}
+          alt=""
+          className="about-img"
+          style={{ borderRadius: "10px" }}
+        />
       </div>
 
       <div className="about-right">
