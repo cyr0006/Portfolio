@@ -11,7 +11,7 @@ const AboutMain = () => {
     <div className="about">
       <div className="about-left">
         <img
-          src={acyrus1}
+          src={acyrus3}
           alt=""
           className="about-img"
           style={{ borderRadius: "10px" }}
@@ -23,7 +23,7 @@ const AboutMain = () => {
           style={{ borderRadius: "10px" }}
         />
         <img
-          src={acyrus3}
+          src={acyrus1}
           alt=""
           className="about-img"
           style={{ borderRadius: "10px" }}

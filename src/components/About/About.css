@@ -6,13 +6,28 @@
   width: 90%;
 }
 
+/* LEFT IMAGE COLLAGE */
 .about-left {
   flex-basis: 40%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 180px 180px;
   gap: 10px;
 }
 
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* prevents distortion */
+  border-radius: 10px;
+}
+
+/* Make the first image tall */
+.about-img:first-child {
+  grid-row: span 2;
+}
+
+/* RIGHT SIDE TEXT */
 .about-right {
   flex-basis: 56%;
 }
@@ -34,23 +49,4 @@
 .about-right p {
   color: white;
   margin-bottom: 15px;
-}
-
-.about-left {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 180px 180px;
-  gap: 10px;
-}
-
-.about-img:first-child {
-  grid-row: span 2; /* First image spans both rows */
-  height: 100%;
-}
-
-.about-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
 }
