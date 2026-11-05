@@ -13,7 +13,10 @@ export default {
     "./src/components/DotGrid/**/*.{js,ts,jsx,tsx}",
     "./src/components/FlexCarousel/**/*.{js,ts,jsx,tsx}",
     "./src/components/CircularGallery/**/*.{js,ts,jsx,tsx}",
-    "./src/components/CrystalisedBall/**/*.{js,ts,jsx,tsx}"
+    "./src/components/CrystalisedBall/**/*.{js,ts,jsx,tsx}",
+    "./src/components/InfiniteMenu.tsx",
+    "./src/components/Projects/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/Projects.tsx"
   ],
   theme: {
     extend: {},
