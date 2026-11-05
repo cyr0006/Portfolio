@@ -15,6 +15,7 @@ const Hero = () => {
         activeColor="#f5deb3"
         proximity={160}
         shockRadius={300}
+        glow={0.7}
       />
       <div className="hero-text hero-panel">
         <BlurText

@@ -255,6 +255,7 @@ uniform float uReady;
 uniform float uShift;
 uniform float uDpr;
 uniform vec3 uPlaceholder;
+uniform vec3 uCardBg;
 in vec2 vUv;
 in vec2 vLocal;
 out vec4 fragColor;
@@ -275,7 +276,8 @@ void main() {
   vec2 uv = vec2(local.x, 1.0 - local.y);
   uv = (uv - 0.5) * scale + 0.5;
   uv.x += uShift * (1.0 - scale.x) * 0.5;
-  vec3 image = texture(tMap, uv).rgb;
+  vec4 texel = texture(tMap, uv);
+  vec3 image = mix(uCardBg, texel.rgb, texel.a);
   vec3 color = mix(uPlaceholder, image, uReady);
   float alpha = mask * uAlpha;
   fragColor = vec4(color * alpha, alpha);
@@ -501,7 +503,8 @@ const FlexCarousel = ({
         uReady: { value: 0 },
         uShift: { value: 0 },
         uDpr: { value: 1 },
-        uPlaceholder: { value: [0.5, 0.5, 0.5] }
+        uPlaceholder: { value: [0.5, 0.5, 0.5] },
+        uCardBg: { value: [0.02, 0, 0.067] }
       }
     });
     cardProgram.setBlendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
@@ -1369,8 +1372,16 @@ const FlexCarousel = ({
   return (
     <div
       ref={containerRef}
-      className={`relative h-full w-full cursor-grab touch-pan-y select-none overflow-hidden overscroll-contain outline-none [-webkit-tap-highlight-color:transparent] focus-visible:shadow-[inset_0_0_0_2px_rgba(128,128,140,0.55)] data-[hover=open]:cursor-zoom-in data-[hover=close]:cursor-zoom-out data-[dragging]:cursor-grabbing ${className}`.trim()}
-      style={{ ...style, '--flex-carousel-half': `${Math.min(Math.max(cardHeight, 0.05), 1) * 50}%` } as CSSProperties}
+      className={`cursor-grab touch-pan-y select-none overflow-hidden overscroll-contain outline-none [-webkit-tap-highlight-color:transparent] focus-visible:shadow-[inset_0_0_0_2px_rgba(128,128,140,0.55)] data-[hover=open]:cursor-zoom-in data-[hover=close]:cursor-zoom-out data-[dragging]:cursor-grabbing ${className}`.trim()}
+      style={
+        {
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          ...style,
+          '--flex-carousel-half': `${Math.min(Math.max(cardHeight, 0.05), 1) * 50}%`,
+        } as CSSProperties
+      }
       role="region"
       aria-roledescription="carousel"
       aria-label="Image carousel"
@@ -1379,7 +1390,14 @@ const FlexCarousel = ({
       <style>{STYLE}</style>
       {captions && current && revealed && (
         <div
-          className="pointer-events-none absolute inset-x-0 top-[calc(50%_+_var(--flex-carousel-half)_*_var(--flex-carousel-lift,1)_+_22px)] flex flex-col items-center gap-1.5 px-4 text-center animate-[flex-carousel-reveal_900ms_ease_both] motion-reduce:animate-none"
+          className="flex flex-col items-center gap-1.5 px-4 text-center animate-[flex-carousel-reveal_900ms_ease_both] motion-reduce:animate-none"
+          style={{
+            pointerEvents: 'none',
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 'calc(50% + var(--flex-carousel-half) * var(--flex-carousel-lift, 1) + 22px)',
+          }}
           aria-hidden="true"
         >
           <span
@@ -1399,7 +1417,21 @@ const FlexCarousel = ({
           </span>
         </div>
       )}
-      <div className="sr-only" aria-live="polite" aria-atomic="true">
+      <div
+        style={{
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          padding: 0,
+          margin: '-1px',
+          overflow: 'hidden',
+          clip: 'rect(0, 0, 0, 0)',
+          whiteSpace: 'nowrap',
+          border: 0,
+        }}
+        aria-live="polite"
+        aria-atomic="true"
+      >
         {`${label}, ${active + 1} of ${list.length}`}
       </div>
     </div>
