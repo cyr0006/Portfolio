@@ -24,6 +24,7 @@ const AboutMain = () => {
           strapColor="wheat"
           metal="gold"
         />
+        <span className="lanyard-hint">Tap to interact</span>
       </div>
 
       <div className="about-right">

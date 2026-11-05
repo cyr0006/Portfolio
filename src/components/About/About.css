@@ -8,8 +8,22 @@
 
 /* LANYARD (Home page variant, replaces the photo collage) */
 .lanyard-slot {
+  position: relative;
   flex-basis: 40%;
   height: clamp(380px, 45vw, 520px);
+}
+
+.lanyard-hint {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(245, 222, 179, 0.6);
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* RIGHT SIDE TEXT */
