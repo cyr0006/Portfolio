@@ -14,7 +14,7 @@ const Frameworks = () => {
   const slideWidth = 100 / totalSlides;
 
   const slideFwd = () => {
-    if (txRef.current > -(100 - slideWidth - slideWidth)) {
+    if (txRef.current > -(100 - slideWidth)) {
       txRef.current -= slideWidth;
     }
     slider.current!.style.transform = `translateX(${txRef.current}%)`;

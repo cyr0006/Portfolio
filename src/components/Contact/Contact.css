@@ -21,7 +21,8 @@
 }
 
 .contact-col h3 svg {
-  width: 100px;
+  width: 28px;
+  height: 28px;
   margin-left: 2px;
 }
 .contact-col li svg {
@@ -58,7 +59,7 @@
 .contact form input:focus,
 .contact form textarea:focus {
   border: 2px solid rgb(185, 168, 136);
-  inset: 0 0 8px rgba(185, 168, 136, 0.5);
+  box-shadow: 0 0 8px rgba(185, 168, 136, 0.5);
   transform: scale(1.01);
   transition: all 0.3s ease;
 }

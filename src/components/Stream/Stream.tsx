@@ -2,7 +2,6 @@ import "./Stream.css";
 import { motion } from "framer-motion";
 import monash_logo from "../../assets/monash_logo.png";
 import cardinia_logo from "../../assets/cardinia_logo.png";
-import Programs from "../Programs/Programs";
 import SkillsGraph from "../SkillsGraph/SkillsGraph";
 
 const Stream = () => {
@@ -77,6 +76,14 @@ const Stream = () => {
           <div className="stream-line-l" />
           <div className="content-blocks-l">
             <h2>Skills</h2>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <h4 className="subheading">Visualised</h4>
+              <SkillsGraph />
+            </motion.div>
             <motion.div
               className="block"
               initial={{ opacity: 0, x: 50 }}
@@ -176,24 +183,10 @@ const Stream = () => {
                 <li>iOS / Apple ecosystem app development</li>
               </ul>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
-              <h4 className="subheading">Visualised</h4>
-              <SkillsGraph />
-            </motion.div>
           </div>
         </section>
       </div>
-      <div className="about-container">
-        <section className="about-row">
-          <div className="stream-line-r" />
-          <Programs />
-        </section>
-      </div>
+
     </>
   );
 };

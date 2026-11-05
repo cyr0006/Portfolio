@@ -4,7 +4,8 @@ export default {
     "./src/components/Chat/**/*.{js,ts,jsx,tsx}",
     "./src/pages/Chat.tsx",
     "./src/hooks/useChatbot.ts",
-    "./src/hooks/useChatScroll.ts"
+    "./src/hooks/useChatScroll.ts",
+    "./src/components/BlurText/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},

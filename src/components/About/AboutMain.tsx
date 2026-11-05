@@ -5,6 +5,7 @@ import acyrus4 from "../../assets/acyrus4.jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import r_arrow from "../../assets/r-arrow.png";
+import BlurText from "../BlurText/BlurText";
 
 const AboutMain = () => {
   return (
@@ -32,7 +33,12 @@ const AboutMain = () => {
 
       <div className="about-right">
         <h3>Aryan</h3>
-        <h2>Software Engineer - Problem Solver - Critical Thinker</h2>
+        <BlurText
+          as="h2"
+          text="Software Engineer - Problem Solver - Critical Thinker"
+          effect="focus"
+          animateBy="words"
+        />
         <p>
           My name is Aryan Cyrus. I am a final year student from Monash
           University. I am currently finishing my final year of Bachelor of
