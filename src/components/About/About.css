@@ -6,27 +6,6 @@
   width: 90%;
 }
 
-/* LEFT IMAGE COLLAGE */
-.about-left {
-  flex-basis: 40%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 180px 180px;
-  gap: 10px;
-}
-
-.about-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* prevents distortion */
-  border-radius: 10px;
-}
-
-/* Make the first image tall */
-.about-img:first-child {
-  grid-row: span 2;
-}
-
 /* LANYARD (Home page variant, replaces the photo collage) */
 .lanyard-slot {
   flex-basis: 40%;
@@ -36,6 +15,14 @@
 /* RIGHT SIDE TEXT */
 .about-right {
   flex-basis: 56%;
+}
+
+/* About page variant: .about-right is the only child (no lanyard-slot
+   sibling), so give it the full width instead of the 56% split. */
+.about-solo {
+  flex-basis: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .about-right h2 {
@@ -64,15 +51,10 @@
     gap: 30px;
   }
 
-  .about-left,
   .about-right,
   .lanyard-slot {
     flex-basis: 100%;
     width: 100%;
-  }
-
-  .about-left {
-    grid-template-rows: 140px 140px;
   }
 
   .lanyard-slot {
@@ -85,10 +67,6 @@
 }
 
 @media (max-width: 480px) {
-  .about-left {
-    grid-template-rows: 110px 110px;
-  }
-
   .lanyard-slot {
     height: 320px;
   }

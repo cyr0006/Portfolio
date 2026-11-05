@@ -1,0 +1,6 @@
+.crystal-ball-slot {
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 42vw, 480px);
+  margin: 0px 0 40px;
+}

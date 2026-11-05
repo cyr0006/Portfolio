@@ -15,7 +15,7 @@ const App = () => {
       <div className="page-container">
         <Title subtitle="About Me" title="Details" />
         <AboutMain />
-        <Title subtitle="From Databases to VM-ware" title="Tools that I use" />
+        <Title subtitle="End-to-end, Full stack; Anything and everything, plus a little extra!" title="Tools that I use" />
         <ToolsCarousel />
       </div>
       <Horizon />

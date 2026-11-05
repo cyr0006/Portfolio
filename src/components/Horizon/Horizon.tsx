@@ -14,8 +14,8 @@ const Horizon = () => {
         titleFontSize="var(--horizon-text-size)"
         titleTextShadow="var(--horizon-text-shadow)"
         scrollHint="Scroll to explore"
-        startWidth={70}
-        startHeight={78}
+        startWidth={60}
+        startHeight={68}
         scrollDistance={0.6}
         holdDistance={0.1}
         useWindowScroll

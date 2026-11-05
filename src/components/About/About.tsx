@@ -1,19 +1,10 @@
 import "../About/About.css";
-import acyrus1 from "../../assets/acyrus1.jpg";
-import acyrus3 from "../../assets/acyrus3.jpg";
-import acyrus4 from "../../assets/acyrus4.jpg";
 import BlurText from "../BlurText/BlurText";
 import TextType from "../TypeText/TypeText";
 const About = () => {
   return (
     <div className="about">
-      <div className="about-left">
-        <img src={acyrus3} alt="" className="about-img" />
-        <img src={acyrus4} alt="" className="about-img" />
-        <img src={acyrus1} alt="" className="about-img" />
-      </div>
-
-      <div className="about-right">
+      <div className="about-right about-solo">
         <h3>Aryan</h3>
         <BlurText
           as="h2"
