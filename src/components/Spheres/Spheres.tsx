@@ -6,9 +6,10 @@ import "../Spheres/Spheres.css";
 
 type SpheresProps = {
   myDecal: string;
+  colour: string;
 };
 
-const Spheres = ({ myDecal }: SpheresProps) => {
+const Spheres = ({ myDecal, colour }: SpheresProps) => {
   return (
     <Canvas camera={{ position: [0, 0, 2], fov: 75 }}>
       <OrbitControls
@@ -23,7 +24,7 @@ const Spheres = ({ myDecal }: SpheresProps) => {
         intensity={3}
       />
       <AnimatedBox decalImage={myDecal} />
-      <AnimatedMesh />
+      <AnimatedMesh colour={colour} />
     </Canvas>
   );
 };
@@ -86,7 +87,11 @@ function AnimatedBox({ decalImage }: AnimatedBoxProps) {
     </mesh>
   );
 }
-function AnimatedMesh() {
+
+type AnimatedMeshProps = {
+  colour: string;
+};
+function AnimatedMesh({ colour }: AnimatedMeshProps) {
   const polyRef = useRef<Mesh>(null!);
   //Snap back
   const [dragging, setDragging] = useState(false);
@@ -123,7 +128,7 @@ function AnimatedMesh() {
     >
       <icosahedronGeometry args={[1.1, 2]} />
 
-      <meshBasicMaterial wireframe color={"rgba(97, 171, 255, 1)"} />
+      <meshBasicMaterial wireframe color={colour} />
     </mesh>
   );
 }

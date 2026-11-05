@@ -1,11 +1,14 @@
 import "../About/About.css";
-import bust from "../../assets/bust.jpg";
-
+import acyrus1 from "../../assets/acyrus1.jpg";
+import acyrus3 from "../../assets/acyrus3.jpg";
+import acyrus4 from "../../assets/acyrus4.jpg";
 const About = () => {
   return (
     <div className="about">
       <div className="about-left">
-        <img src={bust} alt="" className="about-img" />
+        <img src={acyrus3} alt="" className="about-img" />
+        <img src={acyrus4} alt="" className="about-img" />
+        <img src={acyrus1} alt="" className="about-img" />
       </div>
 
       <div className="about-right">
@@ -13,7 +16,7 @@ const About = () => {
         <h2>Software Engineer - Problem Solver - Critical Thinker</h2>
         <p>
           My name is Aryan Cyrus. I am a final year student from Monash
-          Univeristy. I am currently finishing my final year of Bachelor of
+          University. I am currently finishing my final year of Bachelor of
           Software Engineering (Hon).
         </p>
         <p>
