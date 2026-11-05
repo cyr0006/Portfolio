@@ -1,33 +1,28 @@
 import "../About/About.css";
-import acyrus1 from "../../assets/acyrus1.jpg";
-import acyrus3 from "../../assets/acyrus3.jpg";
-import acyrus4 from "../../assets/acyrus4.jpg";
+import acyrus3 from "../../assets/acyrus3.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import r_arrow from "../../assets/r-arrow.png";
 import BlurText from "../BlurText/BlurText";
+import Lanyard from "../Lanyard/Lanyard";
 
 const AboutMain = () => {
   return (
     <div className="about">
-      <div className="about-left">
-        <img
-          src={acyrus3}
-          alt=""
-          className="about-img"
-          style={{ borderRadius: "10px" }}
-        />
-        <img
-          src={acyrus4}
-          alt=""
-          className="about-img"
-          style={{ borderRadius: "10px" }}
-        />
-        <img
-          src={acyrus1}
-          alt=""
-          className="about-img"
-          style={{ borderRadius: "10px" }}
+      <div className="lanyard-slot">
+        <Lanyard
+          frontImage={acyrus3}
+          frontLabel="Aryan Cyrus"
+          backDetails={[
+            "Aryan Cyrus",
+            "Software Engineering (Hon)",
+            "Monash University",
+            "Professionally accredited genius",
+          ]}
+          backLink="https://acyrus.netlify.app/Aryan_Cyrus_Resume.pdf"
+          cardColor="#160049"
+          strapColor="wheat"
+          metal="gold"
         />
       </div>
 

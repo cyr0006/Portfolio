@@ -5,7 +5,9 @@ export default {
     "./src/pages/Chat.tsx",
     "./src/hooks/useChatbot.ts",
     "./src/hooks/useChatScroll.ts",
-    "./src/components/BlurText/**/*.{js,ts,jsx,tsx}"
+    "./src/components/BlurText/**/*.{js,ts,jsx,tsx}",
+    "./src/components/TypeText/**/*.{js,ts,jsx,tsx}",
+    "./src/components/Lanyard/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},

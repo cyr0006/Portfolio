@@ -27,6 +27,12 @@
   grid-row: span 2;
 }
 
+/* LANYARD (Home page variant, replaces the photo collage) */
+.lanyard-slot {
+  flex-basis: 40%;
+  height: clamp(380px, 45vw, 520px);
+}
+
 /* RIGHT SIDE TEXT */
 .about-right {
   flex-basis: 56%;
@@ -59,13 +65,18 @@
   }
 
   .about-left,
-  .about-right {
+  .about-right,
+  .lanyard-slot {
     flex-basis: 100%;
     width: 100%;
   }
 
   .about-left {
     grid-template-rows: 140px 140px;
+  }
+
+  .lanyard-slot {
+    height: clamp(320px, 70vw, 420px);
   }
 
   .about-right h2 {
@@ -76,6 +87,10 @@
 @media (max-width: 480px) {
   .about-left {
     grid-template-rows: 110px 110px;
+  }
+
+  .lanyard-slot {
+    height: 320px;
   }
 
   .about-right h2 {
