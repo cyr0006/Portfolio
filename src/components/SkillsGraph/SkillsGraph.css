@@ -1,0 +1,87 @@
+.skills-graph-container {
+  position: relative;
+  width: 100%;
+  height: clamp(480px, 65vw, 760px);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.skills-graph-reset {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.06);
+  color: wheat;
+  border: 1px solid rgba(245, 222, 179, 0.4);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.skills-graph-reset:hover {
+  background: rgba(245, 222, 179, 0.15);
+  border-color: wheat;
+}
+
+.skills-graph-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+  touch-action: none;
+}
+
+.skills-graph-svg:active {
+  cursor: grabbing;
+}
+
+.skills-node circle {
+  stroke: rgba(0, 0, 0, 0.4);
+  stroke-width: 1px;
+  cursor: grab;
+  transition: opacity 0.25s ease;
+}
+
+.skills-node:active circle {
+  cursor: grabbing;
+}
+
+.skills-label {
+  fill: rgba(255, 255, 255, 0.75);
+  font-size: 10px;
+  font-family: inherit;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.25s ease, fill 0.25s ease;
+}
+
+.skills-label.category {
+  fill: wheat;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.skills-node.dim circle,
+.skills-node.dim .skills-label {
+  opacity: 0.15;
+}
+
+line.dim {
+  opacity: 0.05;
+}
+
+@media (max-width: 768px) {
+  .skills-label {
+    font-size: 9px;
+  }
+
+  .skills-label.category {
+    font-size: 11px;
+  }
+}

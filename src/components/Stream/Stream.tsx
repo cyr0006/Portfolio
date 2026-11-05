@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import monash_logo from "../../assets/monash_logo.png";
 import cardinia_logo from "../../assets/cardinia_logo.png";
 import Programs from "../Programs/Programs";
+import SkillsGraph from "../SkillsGraph/SkillsGraph";
 
 const Stream = () => {
   return (
@@ -174,6 +175,15 @@ const Stream = () => {
                 </li>
                 <li>iOS / Apple ecosystem app development</li>
               </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <h4 className="subheading">Visualised</h4>
+              <SkillsGraph />
             </motion.div>
           </div>
         </section>
