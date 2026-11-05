@@ -8,22 +8,25 @@
 
 /* LANYARD (Home page variant, replaces the photo collage) */
 .lanyard-slot {
-  position: relative;
   flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lanyard-stage {
+  position: relative;
+  width: 100%;
   height: clamp(380px, 45vw, 520px);
 }
 
 .lanyard-hint {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 60px;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(245, 222, 179, 0.6);
   pointer-events: none;
-  z-index: 2;
 }
 
 /* RIGHT SIDE TEXT */
@@ -71,7 +74,7 @@
     width: 100%;
   }
 
-  .lanyard-slot {
+  .lanyard-stage {
     height: clamp(320px, 70vw, 420px);
   }
 
@@ -81,7 +84,7 @@
 }
 
 @media (max-width: 480px) {
-  .lanyard-slot {
+  .lanyard-stage {
     height: 320px;
   }
 

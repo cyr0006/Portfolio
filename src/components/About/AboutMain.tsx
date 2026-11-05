@@ -10,20 +10,22 @@ const AboutMain = () => {
   return (
     <div className="about">
       <div className="lanyard-slot">
-        <Lanyard
-          frontImage={acyrus3}
-          frontLabel="Aryan Cyrus"
-          backDetails={[
-            "Aryan Cyrus",
-            "Software Engineering (Hon)",
-            "Monash University",
-            "Professionally accredited genius",
-          ]}
-          backLink="https://acyrus.netlify.app/Aryan_Cyrus_Resume.pdf"
-          cardColor="#160049"
-          strapColor="wheat"
-          metal="gold"
-        />
+        <div className="lanyard-stage">
+          <Lanyard
+            frontImage={acyrus3}
+            frontLabel="Aryan Cyrus"
+            backDetails={[
+              "Aryan Cyrus",
+              "Software Engineering (Hon)",
+              "Monash University",
+              "Professionally accredited genius",
+            ]}
+            backLink="https://acyrus.netlify.app/Aryan_Cyrus_Resume.pdf"
+            cardColor="#160049"
+            strapColor="wheat"
+            metal="gold"
+          />
+        </div>
         <span className="lanyard-hint">Tap to interact</span>
       </div>
 
