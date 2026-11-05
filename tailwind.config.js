@@ -7,7 +7,10 @@ export default {
     "./src/hooks/useChatScroll.ts",
     "./src/components/BlurText/**/*.{js,ts,jsx,tsx}",
     "./src/components/TypeText/**/*.{js,ts,jsx,tsx}",
-    "./src/components/Lanyard/**/*.{js,ts,jsx,tsx}"
+    "./src/components/Lanyard/**/*.{js,ts,jsx,tsx}",
+    "./src/components/ScrollExpand/**/*.{js,ts,jsx,tsx}",
+    "./src/components/Horizon/**/*.{js,ts,jsx,tsx}",
+    "./src/components/DotGrid/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},

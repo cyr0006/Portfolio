@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Test from "./pages/Test";
 import Chat from "./pages/Chat";
+import Musings from "./pages/Musings";
 import ScrollToTop from "./hooks/linkScroll";
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/test" element={<Test />} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/musings" element={<Musings />} />
       </Routes>
     </Router>
   );

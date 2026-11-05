@@ -4,11 +4,19 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import TextType from "../TypeText/TypeText";
 import BlurText from "../BlurText/BlurText";
+import DotGrid from "../DotGrid/DotGrid";
 
 const Hero = () => {
   return (
     <div className="hero container">
-      <div className="hero-text">
+      <DotGrid
+        style={{ position: "absolute", inset: 0, zIndex: 1 }}
+        baseColor="#4a3f6b"
+        activeColor="#f5deb3"
+        proximity={160}
+        shockRadius={300}
+      />
+      <div className="hero-text hero-panel">
         <BlurText
           as="h1" 
           text="Welcome to the Aryan Cyrus Experience"

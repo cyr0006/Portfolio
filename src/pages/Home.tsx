@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import AboutMain from "../components/About/AboutMain";
 import Frameworks from "../components/Frameworks/Frameworks";
 import { Contact } from "../components/Contact/Contact";
+import Horizon from "../components/Horizon/Horizon";
 
 const App = () => {
   return (
@@ -16,6 +17,9 @@ const App = () => {
         <AboutMain />
         <Title subtitle="From Databases to VM-ware" title="Tools that I use" />
         <Frameworks />
+      </div>
+      <Horizon />
+      <div className="page-container">
         <Title subtitle="Contact Me" title="Get in touch" />
         <Contact />
       </div>

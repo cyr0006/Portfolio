@@ -36,6 +36,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/musings" onClick={ScrollToTop}>
+            Musings
+          </Link>
+        </li>
+        <li>
           <Link
             to="/"
             onClick={() => {
