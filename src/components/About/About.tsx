@@ -15,7 +15,7 @@ const About = () => {
         <TextType
           as="p"
           text={`I'm a final year Software Engineering (Honours) student at Monash University.\n\nMy approach to engineering is collaborative, incremental and rapidly iterative. The benefits of this approach are emergent in magnitudes greater than the sum of the whole. It is a design philosophy mirrored by many industry leaders, and one that is applicable not only to engineering.`}
-          typingSpeed={20}
+          typingSpeed={1}
           loop={false}
           startOnVisible
         />
