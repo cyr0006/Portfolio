@@ -1,0 +1,5 @@
+.tools-carousel-slot {
+  position: relative;
+  width: 100%;
+  height: clamp(360px, 45vw, 520px);
+}

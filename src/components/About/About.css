@@ -1,40 +1,94 @@
-.about{
-    margin: 100px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
+.about {
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
 }
 
-.about-left{
-    flex-basis: 40%;
+/* LANYARD (Home page variant, replaces the photo collage) */
+.lanyard-slot {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.about-right{
-    flex-basis: 56%;
+.lanyard-stage {
+  position: relative;
+  width: 100%;
+  height: clamp(380px, 45vw, 520px);
 }
 
-.about-right h2{
-    color: wheat;
-    font-weight: 600;
-    font-size: 35px;
-    margin: 10px 0;
-    max-width: 400px;
-
+.lanyard-hint {
+  margin-top: 60px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(245, 222, 179, 0.6);
+  pointer-events: none;
 }
 
-.about-right h3{
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
+/* RIGHT SIDE TEXT */
+.about-right {
+  flex-basis: 56%;
 }
 
-.about-right p{
-    color: white;
-    margin-bottom: 15px;
+/* About page variant: .about-right is the only child (no lanyard-slot
+   sibling), so give it the full width instead of the 56% split. */
+.about-solo {
+  flex-basis: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.about-img{
+.about-right h2 {
+  color: wheat;
+  font-weight: 600;
+  font-size: 35px;
+  margin: 10px 0;
+  max-width: 400px;
+}
+
+.about-right h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.about-right p {
+  color: white;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    margin: 60px auto;
+    gap: 30px;
+  }
+
+  .about-right,
+  .lanyard-slot {
+    flex-basis: 100%;
     width: 100%;
-    border-radius: 10px;
+  }
+
+  .lanyard-stage {
+    height: clamp(320px, 70vw, 420px);
+  }
+
+  .about-right h2 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .lanyard-stage {
+    height: 320px;
+  }
+
+  .about-right h2 {
+    font-size: 28px;
+  }
 }

@@ -31,7 +31,8 @@ nav ul li {
 }
 
 nav ul li:nth-child(1) a:hover,
-nav ul li:nth-child(2) a:hover {
+nav ul li:nth-child(2) a:hover,
+nav ul li:nth-child(3) a:hover {
     color: wheat;
     transition: 0.2s;
 }
@@ -48,9 +49,6 @@ nav ul li:nth-child(2) a:hover {
 
 /*---- Media Query ----*/
 @media (max-width: 1000px) {
-    .logo{
-        width: 20px;
-    }
     nav ul li{
         margin: 10px 15px;
     }
@@ -68,12 +66,16 @@ nav ul li:nth-child(2) a:hover {
         right: 0;
         bottom: 0;
         background: rgba(8, 0, 58, 0.945);
-        z-index: -1;
+        z-index: 1;
         width: 250px;
         padding-top: 50px;
         transition: 0.5s;
     box-shadow: 0 0 20px 2px wheat;
 
+    }
+    .bi.bi-list{
+        position: relative;
+        z-index: 2;
     }
     nav ul li{
         display: flex;

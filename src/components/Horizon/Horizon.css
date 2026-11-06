@@ -1,0 +1,16 @@
+.horizon-section {
+  position: relative;
+  width: 100%;
+  --horizon-text-size: clamp(24px, 4.2vw, 68px);
+  --horizon-text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
+}
+
+.horizon-copy {
+  color: white;
+  font-weight: 700;
+  font-size: var(--horizon-text-size);
+  line-height: 1.2;
+  max-width: 820px;
+  margin: 0 0 30px;
+  text-shadow: var(--horizon-text-shadow);
+}
