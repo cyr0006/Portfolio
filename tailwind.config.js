@@ -16,7 +16,9 @@ export default {
     "./src/components/CrystalisedBall/**/*.{js,ts,jsx,tsx}",
     "./src/components/InfiniteMenu.tsx",
     "./src/components/Projects/**/*.{js,ts,jsx,tsx}",
-    "./src/pages/Projects.tsx"
+    "./src/pages/Projects.tsx",
+    "./src/components/Orbiters/**/*.{js,ts,jsx,tsx}",
+    "./src/components/CrystalBallDisplay/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},

@@ -38,17 +38,14 @@ const AboutMain = () => {
           animateBy="words"
         />
         <p>
-          My name is Aryan Cyrus. I am a final year student from Monash
-          University. I am currently finishing my final year of Bachelor of
-          Software Engineering (Hon).
+          Welcome to the Aryan Cyrus experience. I am currently finishing my final year of Bachelor of
+          Software Engineering (Hon) at Monash University.
         </p>
         <p>
-          People often ask me "what would you do if not Software Engineering".
-          At my core I like to solve problems; it's what I do. Engineering is
-          just a conduit to express this.
+          I have what I can only describe as mindset of improvement, learning and problem solving. It is a lifestyle. An obsession. A philosophy that has held me in good stead through the years
         </p>
         <p>
-          Worry not, there's more to me than degrees. Click below to read more.
+          You know you want to know more, click below to make it happen.  
         </p>
         <Link to="/about">
           <motion.button
