@@ -1,4 +1,4 @@
-import Orbiters from "../Orbiters";
+import Orbiters from "../Orbiters/Orbiters";
 import CrystalisedBall from "../CrystalisedBall/CrystalisedBall";
 import "./CrystalBallDisplay.css";
 

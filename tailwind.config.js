@@ -17,7 +17,7 @@ export default {
     "./src/components/InfiniteMenu.tsx",
     "./src/components/Projects/**/*.{js,ts,jsx,tsx}",
     "./src/pages/Projects.tsx",
-    "./src/components/Orbiters.tsx",
+    "./src/components/Orbiters/**/*.{js,ts,jsx,tsx}",
     "./src/components/CrystalBallDisplay/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
