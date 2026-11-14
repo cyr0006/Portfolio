@@ -30,11 +30,11 @@ export interface Musing {
 export const musings: Musing[] = [
   {
     id: "fighting-the-system",
-    title: "Fighting the system - an indicator a system that doesn't quite work anymore",
+    title: "Fighting the system - an indicator a system doesn't quite work anymore",
     date: "2026-10-02",
     tags: ["engineering", "philosophy"],
     excerpt:
-      "Think back to a time you were fighting to make something work; anything. Your code, a business idea, a relationship, a task. If you have to fight the system at every step to make thing work, ask yourself if the system is wrong.",
+      "Think back to a time you were fighting to make something work; anything. Your code, a business idea, a relationship, a task. If you have to fight the system at every step to make things work, ask yourself if the system is wrong.",
     body: `This is a philosophical realisation which was inspired by a Java project of mine at Monash University.
 In short, I was trying to implement a simple turn-based game in Java. This was during one of my early design iterations. I found that every addition, every idea and every change involved an ever-growing level of effort, exceptions and workarounds. An additional attribute here, a change to the logic there.
 The whole point of OOP is to make extension easier, not harder. With my approach, I had all the constrains of OOP, and none of the extensibility. It quickly became apparent that the schema of my app, the fundamental classes and inheritances were wrong. 
