@@ -19,7 +19,11 @@ export default {
     "./src/pages/Projects.tsx",
     "./src/components/Orbiters/**/*.{js,ts,jsx,tsx}",
     "./src/components/CrystalBallDisplay/**/*.{js,ts,jsx,tsx}",
-    "./src/components/ideas/**/*.{js,ts,jsx,tsx}",
+    "./src/components/ChromaGrid/**/*.{js,ts,jsx,tsx}",
+    "./src/components/FadeContent/**/*.{js,ts,jsx,tsx}",
+    "./src/components/JellyRadio/**/*.{js,ts,jsx,tsx}",
+    "./src/components/LineSideBar/**/*.{js,ts,jsx,tsx}",
+    "./src/components/PulseHeart/**/*.{js,ts,jsx,tsx}",
     "./src/components/Musings/**/*.{js,ts,jsx,tsx}",
     "./src/pages/Musings.tsx",
     "./src/pages/MusingDetail.tsx"

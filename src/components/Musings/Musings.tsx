@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import FadeContent from "../ideas/FadeContent";
-import ChromaGrid, { type ChromaItem } from "../ideas/ChromaGrid";
-import JellyRadio from "../ideas/JellyRadio";
+import FadeContent from "../FadeContent/FadeContent";
+import ChromaGrid, { type ChromaItem } from "../ChromaGrid/ChromaGrid";
+import JellyRadio from "../JellyRadio/JellyRadio";
 import { TOPICS, musings, topicById, type Musing } from "./musingsData";
 import { makePlaceholder } from "./placeholder";
 import { formatDate } from "./utils";
