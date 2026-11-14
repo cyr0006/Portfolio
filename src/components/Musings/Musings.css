@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.musings {
+  width: 80%;
+  margin: 0 auto 80px;
+}
+
+.musings-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.musings-header h1 {
+  color: wheat;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.musings-header p {
+  color: white;
+  max-width: 600px;
+  margin: 16px auto 0;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.musings-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.musings-filter {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.musings-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.musing-card {
+  background: rgba(245, 222, 179, 0.05);
+  border: 1px solid rgba(245, 222, 179, 0.15);
+  border-radius: 16px;
+  padding: 32px;
+  scroll-margin-top: 140px;
+}
+
+.musing-card-clickable {
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.musing-card-clickable:hover,
+.musing-card-clickable:focus-visible {
+  border-color: rgba(245, 222, 179, 0.4);
+  background: rgba(245, 222, 179, 0.08);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.musing-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.musing-card-date {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.musing-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: #050011;
+  font-weight: 600;
+}
+
+.musing-card h2 {
+  color: wheat;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.musing-card-excerpt {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.musing-card-readmore {
+  display: inline-block;
+  margin-top: 16px;
+  color: wheat;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.musings-empty {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 60px 0;
+}
+
+@media (max-width: 768px) {
+  .musings {
+    width: 90%;
+  }
+
+  .musing-card {
+    padding: 24px;
+  }
+}

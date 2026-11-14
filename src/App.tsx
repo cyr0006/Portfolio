@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Test from "./pages/Test";
 import Chat from "./pages/Chat";
 import Musings from "./pages/Musings";
+import MusingDetail from "./pages/MusingDetail";
 import Projects from "./pages/Projects";
 import ScrollToTop from "./hooks/linkScroll";
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/test" element={<Test />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/musings" element={<Musings />} />
+        <Route path="/musings/:id" element={<MusingDetail />} />
       </Routes>
     </Router>
   );

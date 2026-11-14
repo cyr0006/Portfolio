@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.musing-detail {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.musing-detail-nav {
+  position: sticky;
+  top: 140px;
+}
+
+.musing-detail-nav-label {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.musing-detail-article {
+  max-width: 720px;
+}
+
+.musing-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.musing-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: #050011;
+  font-weight: 600;
+}
+
+.musing-detail-article h1 {
+  color: wheat;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.musing-detail-meta {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.musing-detail-meta span:not(:last-child)::after {
+  content: "·";
+  margin: 0 8px;
+  opacity: 0.6;
+}
+
+.musing-detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(245, 222, 179, 0.15);
+  border-bottom: 1px solid rgba(245, 222, 179, 0.15);
+  margin-bottom: 32px;
+}
+
+.musing-detail-action {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #232326;
+  border: 0;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.musing-detail-action:hover:not(:disabled) {
+  color: wheat;
+}
+
+.musing-detail-action:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.musing-detail-action svg {
+  width: 20px;
+  height: 20px;
+}
+
+.musing-detail-copied {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: wheat;
+  color: #050011;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.musing-detail-body {
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.musing-detail-body p {
+  margin-bottom: 18px;
+}
+
+.musing-detail-body p:last-child {
+  margin-bottom: 0;
+}
+
+.musing-detail-back {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.musing-detail-back:hover {
+  color: wheat;
+}
+
+.musing-detail-not-found {
+  text-align: center;
+  color: white;
+  padding: 100px 0;
+}
+
+@media (max-width: 900px) {
+  .musing-detail {
+    width: 90%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .musing-detail-nav {
+    display: none;
+  }
+}
