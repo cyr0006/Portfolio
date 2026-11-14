@@ -1,0 +1,6 @@
+.photo-gallery-slot {
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 42vw, 480px);
+  margin: 0px 0 0px;
+}

@@ -1,31 +1,51 @@
 import "../About/About.css";
-import bust from "../../assets/bust.jpg";
+import acyrus3 from "../../assets/acyrus3.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import r_arrow from "../../assets/r-arrow.png";
+import BlurText from "../BlurText/BlurText";
+import Lanyard from "../Lanyard/Lanyard";
 
 const AboutMain = () => {
   return (
     <div className="about">
-      <div className="about-left">
-        <img src={bust} alt="" className="about-img" />
+      <div className="lanyard-slot">
+        <div className="lanyard-stage">
+          <Lanyard
+            frontImage={acyrus3}
+            frontLabel="Aryan Cyrus"
+            backDetails={[
+              "Aryan Cyrus",
+              "Software Engineering (Hon)",
+              "Monash University",
+              "Professionally accredited genius",
+            ]}
+            backLink="https://acyrus.netlify.app/Aryan_Cyrus_Resume.pdf"
+            cardColor="#160049"
+            strapColor="wheat"
+            metal="gold"
+          />
+        </div>
+        <span className="lanyard-hint">Tap to interact</span>
       </div>
 
       <div className="about-right">
         <h3>Aryan</h3>
-        <h2>Software Engineer - Problem Solver - Critical Thinker</h2>
+        <BlurText
+          as="h2"
+          text="Software Engineer - Problem Solver - Critical Thinker"
+          effect="focus"
+          animateBy="words"
+        />
         <p>
-          My name is Aryan Cyrus. I am a final year student from Monash
-          Univeristy. I am currently finishing my final year of Bachelor of
-          Software Engineering (Hon).
+          Welcome to the Aryan Cyrus experience. I am currently finishing my final year of Bachelor of
+          Software Engineering (Hon) at Monash University.
         </p>
         <p>
-          People often ask me "what would you do if not Software Engineering".
-          At my core I like to solve problems; it's what I do. Engineering is
-          just a conduit to express this.
+          I have what I can only describe as mindset of improvement, learning and problem solving. It is a lifestyle. An obsession. A philosophy that has held me in good stead through the years
         </p>
         <p>
-          Worry not, there's more to me than degrees. Click below to read more.
+          You know you want to know more, click below to make it happen.  
         </p>
         <Link to="/about">
           <motion.button

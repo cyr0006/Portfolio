@@ -3,8 +3,9 @@ import Hero from "../components/Hero/Hero";
 import Title from "../components/Title/Title";
 import Footer from "../components/Footer/Footer";
 import AboutMain from "../components/About/AboutMain";
-import Frameworks from "../components/Frameworks/Frameworks";
+import ToolsCarousel from "../components/ToolsCarousel/ToolsCarousel";
 import { Contact } from "../components/Contact/Contact";
+import Horizon from "../components/Horizon/Horizon";
 
 const App = () => {
   return (
@@ -14,8 +15,11 @@ const App = () => {
       <div className="page-container">
         <Title subtitle="About Me" title="Details" />
         <AboutMain />
-        <Title subtitle="From Databases to VM-ware" title="Tools that I use" />
-        <Frameworks />
+        <Title subtitle="End-to-end, Full stack; Anything and everything, plus a little extra!" title="Tools that I use" />
+        <ToolsCarousel />
+      </div>
+      <Horizon />
+      <div className="page-container">
         <Title subtitle="Contact Me" title="Get in touch" />
         <Contact />
       </div>

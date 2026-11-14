@@ -1,0 +1,93 @@
+.crystal-ball-display {
+  position: relative;
+  width: 92%;
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.crystal-ball-orbit {
+  display: block;
+}
+
+/* Desktop: absolutely centered over the orbit area (which, via Orbiters,
+   establishes this container's height through its own aspect-ratio).
+   Mobile switches this to a normal-flow block - see the media query. */
+.crystal-ball-anchor {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.crystal-ball-anchor > * {
+  pointer-events: auto;
+}
+
+/* The ball sizes itself (CrystalisedBall's size={0.7} prop) against this
+   box, not against the whole orbit area - keep it comfortably inside the
+   orbit path's shorter (vertical) radius so it never collides with a box
+   passing directly above/below center. */
+.crystal-ball-slot {
+  width: clamp(200px, 24vw, 300px);
+  height: clamp(200px, 24vw, 300px);
+}
+
+.orbit-chip {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  overflow: hidden;
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(245, 222, 179, 0.25);
+  background: rgba(10, 6, 20, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.orbit-chip p {
+  margin: 0;
+  color: white;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.crystal-ball-mobile-stack {
+  display: none;
+}
+
+/* The orbit boxes are sized in physical px by the orbit engine, scaled
+   down with the container. Below this width there isn't enough room left
+   for the paragraph text to stay readable, so fall back to a plain
+   stacked layout instead of shrinking it into illegibility. */
+@media (max-width: 768px) {
+  .crystal-ball-orbit {
+    display: none;
+  }
+
+  .crystal-ball-anchor {
+    position: static;
+    inset: auto;
+    margin: 0 0 24px;
+  }
+
+  .crystal-ball-slot {
+    width: clamp(140px, 45vw, 200px);
+    height: clamp(140px, 45vw, 200px);
+  }
+
+  .crystal-ball-mobile-stack {
+    display: block;
+    color: white;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .crystal-ball-mobile-stack p {
+    margin: 0 0 15px;
+  }
+}

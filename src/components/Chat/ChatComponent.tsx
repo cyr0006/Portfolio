@@ -29,7 +29,7 @@ const ChatComponent: React.FunctionComponent<IChatComponentProps> = () => {
           {messages.map((msg: Message, index: number) => (
             <div
               key={index}
-              className={`p-3 rounded-lg max-w-xs' 
+              className={`p-3 rounded-lg max-w-xs
                           ${
                             msg.sender === "user"
                               ? "bg-[#f5dec3] text-[rgba(8,0,58,0.945)] ml-auto"

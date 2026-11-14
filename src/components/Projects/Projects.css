@@ -1,0 +1,44 @@
+.projects-title {
+  margin: 100px auto 0;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.projects-title h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.projects-title h2 {
+  color: wheat;
+  font-weight: 600;
+  font-size: 35px;
+  margin: 10px 0 0;
+}
+
+.projects-menu {
+  width: 90%;
+  max-width: 1100px;
+  height: 70vh;
+  min-height: 420px;
+  margin: 50px auto 100px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .projects-title {
+    margin-top: 60px;
+  }
+
+  .projects-title h2 {
+    font-size: 28px;
+  }
+
+  .projects-menu {
+    height: 75vh;
+    margin: 30px auto 60px;
+  }
+}

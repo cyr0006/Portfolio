@@ -2,7 +2,7 @@ import "./Stream.css";
 import { motion } from "framer-motion";
 import monash_logo from "../../assets/monash_logo.png";
 import cardinia_logo from "../../assets/cardinia_logo.png";
-import Programs from "../Programs/Programs";
+import SkillsGraph from "../SkillsGraph/SkillsGraph";
 
 const Stream = () => {
   return (
@@ -42,15 +42,30 @@ const Stream = () => {
               transition={{ duration: 0.6 }}
             >
               <h3>
-                Customer Support Officer - Cardinia Shire Council (2023 -
-                present)
+                Casual Customer Support Officer - Cardinia Shire Council (Oct
+                2022 - Present)
               </h3>
-              <p>
-                I am currently a member of Cardinia Shire Council Customer
-                Service team. This roles has allowed me to cultivate a myriad of
-                soft skills, which are invaluable in an team or client facing
-                environment.
-              </p>
+              <ul className="nested-list">
+                <li>
+                  Resolve 60+ customer enquiries daily requiring interpretation
+                  of Victorian building regulations, planning constraints, and
+                  local laws while developing strong skills in breaking down
+                  jargon for technical and non-technical stakeholders.
+                </li>
+                <li>
+                  Coordinate with 20+ internal departments to deliver what
+                  residents need to a high standard and within the designated
+                  turnaround time for any given enquiry.
+                </li>
+                <li>
+                  Maintain data accuracy and privacy compliance across
+                  multiple enterprise CRM and receipting systems.
+                </li>
+                <li>
+                  Guided customers through regulatory processes, reducing
+                  escalation rate and improving first-contact resolution.
+                </li>
+              </ul>
             </motion.div>
           </div>
         </section>
@@ -62,24 +77,36 @@ const Stream = () => {
           <div className="content-blocks-l">
             <h2>Skills</h2>
             <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <h4 className="subheading">Visualised</h4>
+              <SkillsGraph />
+            </motion.div>
+            <motion.div
               className="block"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
               <h4 className="subheading">
-                I have accumulated knowledge and experience with countless
-                languages for all applications. These include:
+                Languages, Frameworks and Concepts
               </h4>
               <ul className="nested-list">
-                <li>Python</li>
-                <li>Javascript</li>
-                <li>Java</li>
-                <li>SQL</li>
-                <li>Assembly</li>
-                <li>Shell Script</li>
-                <li>C++</li>
-                <li>MATLAB</li>
+                <li>
+                  Python, JavaScript, TypeScript, Object Oriented languages
+                  (e.g. Java), MATLAB, SQL, NoSQL (various), Assembly, Swift
+                </li>
+                <li>
+                  Web frameworks: Vue, React, Tailwind, Vite, Express.js,
+                  NextJS
+                </li>
+                <li>
+                  Data Structures & Algorithms; experience covering dynamic
+                  programming, graph algorithms, string/parity problems and
+                  their applications.
+                </li>
               </ul>
             </motion.div>
 
@@ -89,10 +116,12 @@ const Stream = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h4 className="subheading">Various Markup Languages</h4>
+              <h4 className="subheading">Data & Analytics</h4>
               <ul className="nested-list">
-                <li>CSS (including Tailwind)</li>
-                <li>HTML</li>
+                <li>
+                  SQL and NoSQL (MongoDB, Cassandra, Neo4j, SQLite3, Postgres)
+                </li>
+                <li>Data warehouse design, OLAP, data cleaning</li>
               </ul>
             </motion.div>
 
@@ -102,12 +131,15 @@ const Stream = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h4 className="subheading">Computer Science Fundamentals</h4>
+              <h4 className="subheading">DevOps & Infrastructure</h4>
               <ul className="nested-list">
                 <li>
-                  In depth knowledge of data structures/algorithms, discrete
-                  mathematics and other fundamental concepts of computer
-                  science.
+                  Git/version control, Docker (dev/staging/prod/CI
+                  workflows), CI/CD pipelines
+                </li>
+                <li>
+                  Linux (Debian/Pi OS), VMware, self-hosted Raspberry Pi home
+                  lab
                 </li>
               </ul>
             </motion.div>
@@ -118,12 +150,12 @@ const Stream = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h4 className="subheading">Databases</h4>
+              <h4 className="subheading">
+                Operating Systems & Computer Networks
+              </h4>
               <ul className="nested-list">
-                <li>
-                  SQL and NoSQL; a comprehensive collection of associated
-                  database tools (MongoDB, Cassandra, Neo4J etc)
-                </li>
+                <li>Network configuration</li>
+                <li>Linux (Debian/Pi OS)</li>
               </ul>
             </motion.div>
 
@@ -133,63 +165,28 @@ const Stream = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <h4 className="subheading">DevOps and Tools</h4>
+              <h4 className="subheading">Other Skills</h4>
               <ul className="nested-list">
+                <li>Power BI, CAD (SolidWorks, Fusion360)</li>
                 <li>
-                  Knowledge of software quality and security testing; including
-                  through pipelining and CI/CD practices
+                  Enterprise CRM and accounting systems (production
+                  environment experience)
                 </li>
-                <li>Use of Git and other version control tools</li>
                 <li>
-                  Use of Docker for production, staging, development, testing,
-                  and CI workflows
+                  Experience with architecting and configuring agentic AI
+                  (LLMs, OCRs amongst others)
                 </li>
-                <li>Use and configuration of VMware</li>
-                <li>Use of Ubuntu Linux</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              className="block"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
-              <h4 className="subheading">
-                Data, Analytics and Business Intelligence
-              </h4>
-              <ul className="nested-list">
                 <li>
-                  Microsoft ecosystem and Microsoft Office Suite of Products
+                  Daily use of GitHub Copilot in addition to agentic
+                  reasoning for productivity.
                 </li>
-                <li>PowerBI</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              className="block"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <h4 className="subheading">Other</h4>
-              <ul className="nested-list">
-                <li>
-                  Experience working with a host of real-time enterprise systems
-                  (including CRMs, receipting and accounting software)
-                </li>
-                <li>CAD using programs such as SolidWorks and Fusion360</li>
+                <li>iOS / Apple ecosystem app development</li>
               </ul>
             </motion.div>
           </div>
         </section>
       </div>
-      <div className="about-container">
-        <section className="about-row">
-          <div className="stream-line-r" />
-          <Programs />
-        </section>
-      </div>
+
     </>
   );
 };

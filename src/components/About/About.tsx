@@ -1,26 +1,24 @@
 import "../About/About.css";
-import bust from "../../assets/bust.jpg";
-
+import BlurText from "../BlurText/BlurText";
+import TextType from "../TypeText/TypeText";
 const About = () => {
   return (
     <div className="about">
-      <div className="about-left">
-        <img src={bust} alt="" className="about-img" />
-      </div>
-
-      <div className="about-right">
+      <div className="about-right about-solo">
         <h3>Aryan</h3>
-        <h2>Software Engineer - Problem Solver - Critical Thinker</h2>
-        <p>
-          My name is Aryan Cyrus. I am a final year student from Monash
-          Univeristy. I am currently finishing my final year of Bachelor of
-          Software Engineering (Hon).
-        </p>
-        <p>
-          People often ask me "what would you do if not Software Engineering".
-          At my core I like to solve problems; it's what I do. Engineering is
-          just a conduit to express this.
-        </p>
+        <BlurText
+          as="h2"
+          text="Software Engineer - Problem Solver - Critical Thinker"
+          effect="focus"
+          animateBy="words"
+        />
+        <TextType
+          as="p"
+          text={`I'm a final year Software Engineering (Honours) student at Monash University.\n\nMy approach to engineering is collaborative, incremental and rapidly iterative. The benefits of this approach are emergent in magnitudes greater than the sum of the whole. It is a design philosophy mirrored by many industry leaders, and one that is applicable not only to engineering.`}
+          typingSpeed={1}
+          loop={false}
+          startOnVisible
+        />
       </div>
     </div>
   );
