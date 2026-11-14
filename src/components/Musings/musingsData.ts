@@ -48,19 +48,6 @@ So, if you ever feel like every step, is a slog. If you’re fighting to make th
     `,
   },
   {
-    id: "the-discipline-of-unfinished-things",
-    title: "The Discipline of Unfinished Things",
-    date: "2026-09-18",
-    tags: ["life", "philosophy"],
-    excerpt:
-      "We treat unfinished work as a failure of willpower. Most of the time it's a failure of scope.",
-    body: `We treat unfinished work as a failure of willpower. Most of the time it's a failure of scope.
-
-A project doesn't stall because you got lazy halfway through. It stalls because the version of it you imagined at the start was never actually a single thing — it was five things wearing one name. The willpower was fine. The plan was the problem.
-
-Lately I've been trying to notice the moment a task quietly grows a second task inside it, and to name that moment out loud instead of just pushing through. Most unfinished things aren't abandoned. They're just mislabeled.`,
-  },
-  {
     id: "progressive-overload-for-the-mind",
     title: "Progressive Overload for the Mind",
     date: "2026-08-27",
@@ -69,36 +56,11 @@ Lately I've been trying to notice the moment a task quietly grows a second task 
       "The gym taught me that growth requires a load just slightly heavier than what's comfortable. I'm not sure why I ever expected learning to work differently.",
     body: `The gym taught me that growth requires a load just slightly heavier than what's comfortable. I'm not sure why I ever expected learning to work differently.
 
-If you lift the same weight forever, your body has no reason to change. If you read the same kind of problem forever, your thinking doesn't either. The discomfort isn't a sign you're doing it wrong — it's the actual mechanism.
+If you lift the same weight forever, your body has no reason to change. If you read the same kind of problem forever, your thinking doesn't either. The discomfort is a symptom of growth.
 
 The hard part isn't knowing this. It's resisting the urge to stay at a weight that still feels good to lift.`,
   },
-  {
-    id: "on-building-things-no-one-asked-for",
-    title: "On Building Things No One Asked For",
-    date: "2026-07-09",
-    tags: ["engineering", "other"],
-    excerpt:
-      "Most of what I've built that mattered to me started as a solution to a problem exactly one person had: me.",
-    body: `Most of what I've built that mattered to me started as a solution to a problem exactly one person had: me.
 
-There's a pressure, especially early on, to justify a side project by its audience. How many users, how much traction, who else needs this. But some of the most durable engineering habits I have came from tools I built with an audience of one, because that's the only context where I was honest enough to build the thing I actually wanted rather than the thing that looked good on a resume.
-
-Not every project needs to scale. Some just need to be true.`,
-  },
-  {
-    id: "silence-as-input",
-    title: "Silence as Input",
-    date: "2026-06-14",
-    tags: ["philosophy", "life"],
-    excerpt:
-      "We treat quiet as the absence of signal. More often it's the only place signal has room to arrive.",
-    body: `We treat quiet as the absence of signal. More often it's the only place signal has room to arrive.
-
-Every notification, every open tab, every half-finished conversation is competing for the same narrow channel. It's not that silence produces insight directly — it's that insight was always there, underneath the noise, waiting for enough bandwidth to be heard.
-
-I don't think I need more time to think. I think I need fewer things asking for my attention at the same volume as the one thing that actually matters.`,
-  },
 ];
 
 export default musings;
