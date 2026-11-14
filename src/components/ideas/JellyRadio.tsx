@@ -15,7 +15,7 @@ import {
   useTransform,
   type HTMLMotionProps,
   type MotionValue
-} from 'motion/react';
+} from 'framer-motion';
 
 export type JellyRadioItem = string | { value: string; label: ReactNode; icon?: ReactNode; disabled?: boolean };
 

@@ -18,7 +18,10 @@ export default {
     "./src/components/Projects/**/*.{js,ts,jsx,tsx}",
     "./src/pages/Projects.tsx",
     "./src/components/Orbiters/**/*.{js,ts,jsx,tsx}",
-    "./src/components/CrystalBallDisplay/**/*.{js,ts,jsx,tsx}"
+    "./src/components/CrystalBallDisplay/**/*.{js,ts,jsx,tsx}",
+    "./src/components/ideas/**/*.{js,ts,jsx,tsx}",
+    "./src/components/Musings/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/Musings.tsx"
   ],
   theme: {
     extend: {},

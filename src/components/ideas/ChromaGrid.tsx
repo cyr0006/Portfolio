@@ -6,6 +6,7 @@ export interface ChromaItem {
   subtitle?: string;
   accent?: string;
   url?: string;
+  onClick?: () => void;
   alt?: string;
   borderColor?: string;
 }
@@ -380,19 +381,36 @@ export const ChromaGrid = ({
               />
             </>
           );
-          return item.url ? (
-            <a
-              key={key}
-              data-chroma-area=""
-              className={`${CARD_CLASS} active:[filter:var(--chroma-press)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid focus-visible:[outline-color:var(--chroma-ink)]`}
-              style={cardStyle}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {body}
-            </a>
-          ) : (
+          if (item.url) {
+            return (
+              <a
+                key={key}
+                data-chroma-area=""
+                className={`${CARD_CLASS} active:[filter:var(--chroma-press)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid focus-visible:[outline-color:var(--chroma-ink)]`}
+                style={cardStyle}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {body}
+              </a>
+            );
+          }
+          if (item.onClick) {
+            return (
+              <button
+                key={key}
+                type="button"
+                data-chroma-area=""
+                className={`${CARD_CLASS} w-full cursor-pointer appearance-none border-0 bg-transparent text-left active:[filter:var(--chroma-press)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid focus-visible:[outline-color:var(--chroma-ink)]`}
+                style={cardStyle}
+                onClick={item.onClick}
+              >
+                {body}
+              </button>
+            );
+          }
+          return (
             <article key={key} data-chroma-area="" className={CARD_CLASS} style={cardStyle}>
               {body}
             </article>
