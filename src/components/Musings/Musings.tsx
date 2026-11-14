@@ -1,10 +1,11 @@
 import { useMemo, useState } from "react";
-import Markdown from "react-markdown";
+import { useNavigate } from "react-router-dom";
 import FadeContent from "../ideas/FadeContent";
 import ChromaGrid, { type ChromaItem } from "../ideas/ChromaGrid";
 import JellyRadio from "../ideas/JellyRadio";
 import { TOPICS, musings, topicById, type Musing } from "./musingsData";
 import { makePlaceholder } from "./placeholder";
+import { formatDate } from "./utils";
 import "./Musings.css";
 
 type ViewMode = "feed" | "grid";
@@ -19,15 +20,19 @@ const FILTER_ITEMS = [
   ...TOPICS.map((topic) => ({ value: topic.id, label: `${topic.emoji} ${topic.label}` })),
 ];
 
-const formatDate = (iso: string) =>
-  new Date(iso).toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
-const MusingCard = ({ entry }: { entry: Musing }) => (
-  <article id={entry.id} className="musing-card">
+const MusingCard = ({ entry, onOpen }: { entry: Musing; onOpen: () => void }) => (
+  <article
+    className="musing-card musing-card-clickable"
+    onClick={onOpen}
+    role="link"
+    tabIndex={0}
+    onKeyDown={(e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        onOpen();
+      }
+    }}
+  >
     <div className="musing-card-meta">
       {entry.tags.map((tagId) => {
         const topic = topicById(tagId);
@@ -41,13 +46,13 @@ const MusingCard = ({ entry }: { entry: Musing }) => (
       <span className="musing-card-date">{formatDate(entry.date)}</span>
     </div>
     <h2>{entry.title}</h2>
-    <div className="musing-card-body">
-      <Markdown>{entry.body}</Markdown>
-    </div>
+    <p className="musing-card-excerpt">{entry.excerpt}</p>
+    <span className="musing-card-readmore">Read more →</span>
   </article>
 );
 
 const Musings = () => {
+  const navigate = useNavigate();
   const [view, setView] = useState<ViewMode>("feed");
   const [filter, setFilter] = useState("all");
 
@@ -55,6 +60,8 @@ const Musings = () => {
     () => (filter === "all" ? musings : musings.filter((entry) => entry.tags.includes(filter))),
     [filter]
   );
+
+  const openMusing = (id: string) => navigate(`/musings/${id}`);
 
   const gridItems = useMemo<ChromaItem[]>(
     () =>
@@ -65,12 +72,7 @@ const Musings = () => {
           title: entry.title,
           subtitle: `${formatDate(entry.date)}`,
           accent: topic.color,
-          onClick: () => {
-            setView("feed");
-            requestAnimationFrame(() => {
-              document.getElementById(entry.id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-            });
-          },
+          onClick: () => openMusing(entry.id),
         };
       }),
     [filtered]
@@ -114,7 +116,7 @@ const Musings = () => {
         <div className="musings-feed">
           {filtered.map((entry) => (
             <FadeContent key={entry.id} effect="fade" blur duration={0.8} threshold={0.15}>
-              <MusingCard entry={entry} />
+              <MusingCard entry={entry} onOpen={() => openMusing(entry.id)} />
             </FadeContent>
           ))}
         </div>

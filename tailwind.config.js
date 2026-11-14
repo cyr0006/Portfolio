@@ -21,7 +21,8 @@ export default {
     "./src/components/CrystalBallDisplay/**/*.{js,ts,jsx,tsx}",
     "./src/components/ideas/**/*.{js,ts,jsx,tsx}",
     "./src/components/Musings/**/*.{js,ts,jsx,tsx}",
-    "./src/pages/Musings.tsx"
+    "./src/pages/Musings.tsx",
+    "./src/pages/MusingDetail.tsx"
   ],
   theme: {
     extend: {},

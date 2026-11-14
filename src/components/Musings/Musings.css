@@ -56,6 +56,19 @@
   scroll-margin-top: 140px;
 }
 
+.musing-card-clickable {
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.musing-card-clickable:hover,
+.musing-card-clickable:focus-visible {
+  border-color: rgba(245, 222, 179, 0.4);
+  background: rgba(245, 222, 179, 0.08);
+  transform: translateY(-2px);
+  outline: none;
+}
+
 .musing-card-meta {
   display: flex;
   flex-wrap: wrap;
@@ -86,18 +99,19 @@
   margin-bottom: 16px;
 }
 
-.musing-card-body {
+.musing-card-excerpt {
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
   font-size: 16px;
 }
 
-.musing-card-body p {
-  margin-bottom: 14px;
-}
-
-.musing-card-body p:last-child {
-  margin-bottom: 0;
+.musing-card-readmore {
+  display: inline-block;
+  margin-top: 16px;
+  color: wheat;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.85;
 }
 
 .musings-empty {
